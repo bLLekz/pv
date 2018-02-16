@@ -4,25 +4,24 @@
 <div class="contaner-fluid c">
   <div class="container">
     <div class="row r">
-      <div class="col-md-1 t"><img src="" alt=""></div>
+      <div class="col-md-1 t">
+        <img src="" alt="">
+      </div>
       <div class="col-md-3 t text-left">
-        <span>ПроВыборы</span>
+        <a href="/" class="logo_hov">
+        <span class="logo1">ПроВыборы</span>
         <br>
-        <span>Сделай свой выбор правильно</span>
+        <span class="logo2">Сделай свой выбор правильно</span>
+        </a>
       </div>
-      <div class="col-md t"></div>
-      <div class="col-md t">
-          <a href="/">Информация о выборах</a>
-      </div>
-      <div class="col-md t"> 
-          <a href="/">Политические партии</a>
-      </div>
-      <div class="col-md t">  
-          <a href="/">Где голосовать?</a>
-      </div>
-      <div class="col-md t">  
-          <a href="/">Частые вопросы</a>
-      </div>
+      <nav class="navbar navbar-expand-md ml-auto  t">
+        <ul class="navbar-nav  word_stl">
+         <li><div class="mrml1535"><a href="/" class="nav_main">Информация о выборах</a></div></li>
+         <li><div class="mrml1535"><a href="/" class="nav_main">Политические партии</a></div></li>
+         <li><div class="mrml1535"><a href="/" class="nav_main">Где голосовать?</a></div></li>
+         <li><div class="mrml1535"><a href="/" class="nav_main">Частые вопросы</a></div></li>
+        </ul>
+      </nav>
     </div>
   </div>
 </div>

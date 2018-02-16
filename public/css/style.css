@@ -154,6 +154,32 @@ body{
 .ml5{
 	margin-left: 5px;
 }
+.mrml1535{
+    margin-right: -15px;
+	margin-left: 35px;
+}
 .ico_size{
 	font-size: 18px;
+}
+.nav_main{
+	font-family: Roboto-Bold;
+	font-size: 15px;
+	color: #fff !important;
+}
+.nav_main:hover{
+	text-decoration: none;
+	color: #9adcf9 !important;
+}
+.logo1{
+	color: #fff;
+	font-family: Roboto-Bold;
+	font-size: 15px;
+}
+.logo2{
+	color: #fff;
+	font-family: Roboto-Medium;
+	font-size: 15px;
+}
+.logo_hov:hover{
+	text-decoration: none;
 }
