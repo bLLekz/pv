@@ -14,6 +14,9 @@ body{
 	color: #fff;
 	font-family: Roboto-Regular;
 }
+.pt-4, .py-4 {
+    padding-top: 0rem!important;
+}
 .nav_stl{
 	background-color: #16629b;
 }
@@ -31,12 +34,12 @@ body{
 .word_stl3{
 	font-family: Roboto-Bold;
 	font-size: 14px;
-}
- li > a {
+} 
+.nav_head{
 	color: #76b2d7 !important;
 }
- li > a :hover {
-	color: #fff;
+.nav_head:hover {
+	color: #fff !important;
 }
 .drop_lk{
 	color: #fff !important;
@@ -50,28 +53,33 @@ body{
 .login_but{
 	color: #fff;
 	background: #dc3c3e;
+	font-family: Roboto-Bold;
+	font-size: 15px;
+    height: 50px;
 }
 .lk_in{
 	color: #444853;
 	font-size: 20px;
 }
 .bor_f{
-	background: #f4f7fc;
+	background: #e7e7e7;
     border: 2px solid transparent;
     border-radius: 50%;
     font-size: 16px;
     width: 30px;
     height: 30px;
+    margin-left: -30px;
     padding-left: 0px;
-    padding-top: 0.5px;
+    padding-top: 0px;
 }
 .bor_vk{
-	background: #f4f7fc;
+	background: #e7e7e7;
 	border: 2px solid transparent;
     border-radius: 50%;
     font-size: 16px;
     width: 30px;
     height: 30px;
+    margin-left: -35px;
     padding-left: 1px;
     padding-top: 1.5px;
 }
@@ -90,14 +98,62 @@ body{
 .r{
 	background: #e8a8a8;
 	border: 1px solid #000;
-	height: 400px;
+	height: 425px;
 }
 .c{
-	background: #000;height: 800px; text-align: center;
+	background: #1f77b2;height: 500px; text-align: center;
 }
 .t{
-	padding: 60px 10px; text-align: center; background: #ddd; color: #000; border: 1px solid #000;
+	height: 75px; text-align: center; background: #ddd; color: #000; border: 1px solid #000;
 }
 .t:nth-child(even){
 	background: #eee;
+}
+.mt10{
+	margin-top: 10px;
+}
+.times_stl{
+	font-family: Roboto-Bold;
+	font-size: 18px;
+	color: #444853;
+}
+.times_stl:hover{
+	text-decoration:none;
+	color: #444853;
+}
+.login_inp{
+	border: 1px solid #e0e1e6;
+	height: 50px;
+}
+.fast_in{
+	color: #444853;
+	font-size: 16px;
+}
+.foget_pass{
+	color: #9ba3a5;
+    text-decoration: underline;
+}
+.fpass{
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+.register_but{
+	font-family: Roboto-Medium;
+	color: #3c4154;
+	font-size: 15px;
+}
+.register_but:hover{
+	color: #3c4154;
+}
+.mr15{
+	margin-right: 15px;
+}
+.mr8{
+	margin-right: 8px;
+}
+.ml5{
+	margin-left: 5px;
+}
+.ico_size{
+	font-size: 18px;
 }
