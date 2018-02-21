@@ -103,6 +103,9 @@ body{
 .c{
 	background: #1f77b2;height: 500px; text-align: center;
 }
+.child{
+	background: #1f77b2;height: 100px; text-align: center;
+}
 .t{
 	height: 200px; text-align: center; background: #ddd; color: #000; border: 1px solid #000;
 }
@@ -166,7 +169,14 @@ body{
 	font-size: 15px;
 	color: #fff !important;
 }
+.active_link{
+	color: #9adcf9 !important;
+}
 .nav_main:hover{
+	text-decoration: none;
+	color: #9adcf9 !important;
+}
+.nav_main:active, .nav_main:focus{
 	text-decoration: none;
 	color: #9adcf9 !important;
 }
@@ -276,4 +286,8 @@ body{
 }
 .ml-15{
 	margin-left: -15px;
+}
+.logo_poz{
+	margin-top: 25px;
+    margin-left: -15px;	
 }

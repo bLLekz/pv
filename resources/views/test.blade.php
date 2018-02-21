@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="contaner-fluid c">
+<!-- <div class="contaner-fluid c">
   <div class="container">
     <div class="row  ">
       <div class="col-md-1 ">
@@ -28,7 +28,6 @@
     <div class="row mt15">
       <div class="col-md ">
         <div class="btn-group form-control" role="group" aria-label="Basic example">
-          <!-- Default dropright button -->
             <label for="exampleFormControlSelect1"></label>
             <select class="form-control" id="exampleFormControlSelect1">
               <option>Поиск по участникам</option>
@@ -42,9 +41,6 @@
     </div>
     <div class="row mt40">
       <div class="col-md  text-left">
-        <!-- <span class="big_text">
-          Как пользоватся порталом
-        </span> -->
         <h3>Как пользоватся порталом</h3>
         <br>
         <span>
@@ -83,7 +79,7 @@
       </div>
     </div>
   </div>
-</div>
+</div> -->
 <!-- <div class="container c">
   <div class="row justify-content-end">
     <div class="col-4 t">
