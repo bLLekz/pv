@@ -32,9 +32,6 @@
     </div>
     <div class="row mt40">
       <div class="col-md  text-left">
-        <!-- <span class="big_text">
-          Как пользоватся порталом
-        </span> -->
         <h3 class="big_text">Как пользоватся порталом</h3>
         <span class="big_text2">
           Чтобы получить информацию о выборах, 

@@ -123,9 +123,9 @@
                             </span>
                                 <nav class="navbar  ml-15">
                                     <ul class="navbar-nav mr-auto ">
-                                        <li><a href="/" class="content_foot">Информация о выборах</a></li>
-                                        <li><a href="/" class="content_foot">Политические партии</a></li>
-                                        <li><a href="/" class="content_foot">Где голосовать?</a></li>
+                                        <li><a href="/info" class="content_foot">Информация о выборах</a></li>
+                                        <li><a href="/consignment" class="content_foot">Политические партии</a></li>
+                                        <li><a href="/where" class="content_foot">Где голосовать?</a></li>
                                         <li><a href="/" class="content_foot">Контакты</a></li>
                                         <li><a href="/" class="content_foot">Статистика прошедших выборов</a></li>
                                     </ul>
