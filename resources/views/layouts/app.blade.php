@@ -12,8 +12,13 @@
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('css/style.css') }}" rel="stylesheet">
-    <link href="{{ asset('js/main.js') }}" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css" rel="stylesheet" />
+
+    <!-- FontAwesome -->
     <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+
+
+
 </head>
 <body>
     <div id="app">
@@ -78,7 +83,7 @@
                             </div>
                             <div class="col-12 text-center">
                                 <hr>
-                                <a href="/" class="register_but">Зарегистрироваться<i class="fas fa-arrow-right"></i></a>
+                                <a href="/" class="register_but">Зарегистрироваться <i class="fas fa-arrow-right"></i></a>
                             </div>
                         </li>
                             <!--  -->
@@ -178,5 +183,16 @@
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}"></script>
+    <script src="{{ asset('js/main.js') }}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $(".js-example-diacritics").select2();
+            $('.js-example-diacritics').select2({
+                minimumResultsForSearch: -1
+            });
+
+        });
+    </script>
 </body>
 </html>

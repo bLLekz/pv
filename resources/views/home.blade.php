@@ -26,8 +26,21 @@
       </nav>
     </div>
     <div class="row mt15">
-      <div class="col-md ">
-        <input type="text" class="form-control inp_search">
+      <div class="col-md form-control inp_search">
+        <div class="row">
+          <div class="col-md-2 mt15">
+            <select class="js-example-diacritics" name="select_search">
+              <option value="1"><span class="search_text">Поиск по участкам</span></option>
+              <option value="2"><span class="search_text">Поиск по кандидатам</span></option>
+            </select>
+          </div>
+          <div class="col-md-8 bor_search">
+            <input type="text" class="form-control inp_search2" placeholder="Начните вводить адрес места регистрации, начиная с области">
+          </div>
+          <div class="col-md-2">
+            <button class="btn btn-danger form-control main_search" type="button">Начать поиск</button>
+          </div>
+        </div>
       </div>
     </div>
     <div class="row mt40">
@@ -36,8 +49,8 @@
         <span class="big_text2">
           Чтобы получить информацию о выборах, 
           воспользуйтесь "Поиском по участкам". <br>
-          Если Вы хотите узнать о каком-либо кандидате, <br>
-          выберите "Поиск по кандидатам".
+          Если Вы хотите узнать о каком-либо <br>
+           кандидате, выберите "Поиск по кандидатам".
         </span>
         <br>
         <div class="mt15">
@@ -52,8 +65,8 @@
         </span>
         <br>
         <div class="mt15">
-	        <button type="button" class="btn btn-default but_set_in">Войти</button>
-	        <button type="button" class="btn btn-default but_set_up">Зарегистрироваться</button>
+	        <button type="button" class="btn btn-default but_set_in"><span class="but_log">Войти</span></button>
+	        <button type="button" class="btn btn-default but_set_up"><span class="but_reg">Зарегистрироваться</span></button>
 	    </div>
       </div>
       <div class="col-md days_stl text-left">

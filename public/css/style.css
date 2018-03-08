@@ -11,117 +11,45 @@
     src: url(fonts/Roboto-Regular.ttf); 
 }   
 body{
-	color: #fff;
+	/*color: #fff;*/
 	font-family: Roboto-Regular;
 }
-/*dropdown
-.dropdown,
-.dropdown div,
-.dropdown li,
-.dropdown div::after{
-	-webkit-transition: all 100ms ease-in-out;
-	-moz-transition: all 100ms ease-in-out;
-	-ms-transition: all 100ms ease-in-out;
-	transition: all 100ms ease-in-out;
+/* Remove outline on the forms and links */
+:active, :hover, :focus {
+	outline: 0;
+	outline-offset: 0;
 }
-.dropdown .selected::after,
-.dropdown.scrollable div::after{
-	-webkit-pointer-events: none;
-	-moz-pointer-events: none;
-	-ms-pointer-events: none;
-	pointer-events: none;
+.select2-container--default .select2-selection--single .select2-selection__arrow b {
+	margin-left: 10px;
 }
-.dropdown{
-	position: relative;
-	width: 175px;
-	border-right: 1px solid transparent;
-	cursor: pointer;
-	background: #fff;
-
-	border-radius: 3px;
-	
-	-webkit-user-select: none;
-	-moz-user-select: none;
-	user-select: none;
+.select2{
+	width: 173px;
 }
-
-.dropdown.open{
-	z-index: 2;
+.select2-container--default .select2-selection--single {
+	width: 180px;
+	margin-left: -8px;
 }
-
-.dropdown .carat{
-	position: absolute;
-	right: 35px;
-	top: 50%;
-	margin-top: -4px;
-	border: 6px solid transparent;
-	border-top: 8px solid #000;
+.select2-container--default .select2-selection--single {
+	 background-color: transparent;
+	 border: none !important;
+	 /*border-radius: none; */
 }
-
-.dropdown.open .carat{
-	margin-top: -10px;
-	border-top: 6px solid transparent;
-	border-bottom: 8px solid #000;
-}
-
-.dropdown .old{
-	position: absolute;
-	left: 0;
-	top: 0;
-	height: 0;
-	width: 0;
-	overflow: hidden;
-}
-
-.dropdown .selected,
-.dropdown li{
-	display: block;
-	font-size: 16px;
-	line-height: 1;
+.select2-container:focus {
 	color: #000;
-	padding: 9px 12px;
-	overflow: hidden;
-	white-space: nowrap;
+	background-color: #fff;
+	border-color: #80808066;
+	outline: 0;
+	-webkit-box-shadow: none;
+	box-shadow: none;
 }
-
-
-.dropdown div{
-	position: absolute;
-	height: 0;
-	left: -1px;
-	right: -1px;
-	background: #fff;
-	border: 1px solid #ccc;
-	border-top: 1px solid #eee;
-	border-radius: 0 0 3px 3px;
-	overflow: hidden;
-	opacity: 0;
+.search_text{
+	color: red;
 }
-.dropdown div > ul{
-	margin-left: -45px;
-    margin-top: 3px;
+.select2-container .select2-selection--single .select2-selection__rendered {
+	font-family: Roboto-Bold;
+	font-size: 14.5px;
+	color: #000000ab !important;
 }
-
-
-.dropdown.open div{
-	opacity: 1;
-	z-index: 2;
-}
-
-.dropdown li:first-child{
-	list-style: none;
-	border-bottom: 1px solid #80808038;
-}
-
-
-.dropdown li.focus{
-	
-}
-
-.dropdown li.active{
-	
-}
- end dd*/
 .pt-4, .py-4 {
     padding-top: 0rem!important;
 }
@@ -313,11 +241,54 @@ body{
 .inp_search{
 	height: 75px;
 }
+.inp_search2{
+	margin-top: -15px;
+	height: 62px;
+	border: none;
+}
+.inp_search2::-webkit-input-placeholder{
+	color:#83868b;font-family: Roboto-Regular;
+	font-size:16px;
+}
+.inp_search2::-moz-placeholder{
+	color:#83868b;font-family: Roboto-Regular;
+	font-size:16px;
+}/* Firefox 19+ */
+.inp_search2:-moz-placeholder{
+	color:#83868b;font-family: Roboto-Regular;
+	font-size:16px;
+}/* Firefox 18- */
+.inp_search2:-ms-input-placeholder{
+	color:#83868b;font-family: Roboto-Regular;
+	font-size:16px;
+}
+
+.bor_search{
+	margin-top: 15px;
+	border-left: 1px solid #8080806e;
+	height: 29px;
+}
+.main_search{
+	width: 100%;
+	height: 60px;
+	font-family: Roboto-Regular;
+	font-size:16px;
+}
+.form-control:focus {
+	color: #000;
+	background-color: #fff;
+	border-color: #80808066;
+	outline: 0;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+}
 .big_text{
 	font-family: Roboto-Bold;
+	color: #fff;
 }
 .big_days{
 	font-family: Roboto-Bold;
+	color: #fff;
 	font-size: 50px;
 }
 .foot{
@@ -325,7 +296,7 @@ body{
 	height: 490px;
 }
 .more_info{
-	font-family: Roboto-Bold;
+	font-family: Roboto-Regular;
 	font-size: 15px;
 	color: #fff;
 }
@@ -339,7 +310,7 @@ body{
 }
 .but_set_up{
 	margin-left: 15px;
-	font-family: Roboto-Bold;
+	font-family: Roboto-Regular;
 	color: #fff;
 	background: transparent;
 	border: 1px solid #2889c4;
@@ -349,6 +320,9 @@ body{
 }
 .but_set_in{
 	font-family: Roboto-Regular;
+	background-color: #fff;
+	font-weight: 600;
+	color: #3d4353;
 	height: 50px;
 	width: 75px;
 	font-size: 16px;
