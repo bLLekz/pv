@@ -29,13 +29,13 @@
       <div class="col-md form-control inp_search">
         <div class="row">
           <div class="col-md-2 mt15">
-            <select class="js-example-diacritics" name="select_search">
+            <select class="js-example-diacritics"  id="sel_search" name="select_search">
               <option value="1"><span class="search_text">Поиск по участкам</span></option>
               <option value="2"><span class="search_text">Поиск по кандидатам</span></option>
             </select>
           </div>
           <div class="col-md-8 bor_search">
-            <input type="text" class="form-control inp_search2" placeholder="Начните вводить адрес места регистрации, начиная с области">
+            <input type="text" class="form-control inp_search2" id="inp_search" placeholder="Начните вводить адрес места регистрации, начиная с области">
           </div>
           <div class="col-md-2">
             <button class="btn btn-danger form-control main_search" type="button">Начать поиск</button>

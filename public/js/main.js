@@ -37,3 +37,39 @@ function onScroll(event){
         }
     });
 }
+$(document).ready(function() {
+    $(".js-example-diacritics").select2();
+    $('.js-example-diacritics').select2({
+        minimumResultsForSearch: -1
+    });
+
+});
+
+// $(function() {
+//     $('.btn_edit_save').click(function() {
+//
+//         $.ajax({
+//             type: "POST",
+//             url: 'confirm.php',
+//             data:{
+//                 col :arr,
+//                 table: $(".table").attr("id")
+//             },
+//             success: function(data) {
+//                 $('#result').html(data);
+//             }
+//         });
+//     });
+// });
+$(document).ready(function(){
+    $('#sel_search').change(function(){
+        if($(this).val() == 1) {
+            $('#inp_search').val('');
+            $('#inp_search').attr("placeholder", "Начните вводить адрес места регистрации, начиная с области");
+        }
+        else{
+            $('#inp_search').val('');
+            $('#inp_search').attr("placeholder", "Введите ФИО кандидата");
+        }
+    });
+});

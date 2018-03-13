@@ -186,13 +186,7 @@
     <script src="{{ asset('js/main.js') }}"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
     <script>
-        $(document).ready(function() {
-            $(".js-example-diacritics").select2();
-            $('.js-example-diacritics').select2({
-                minimumResultsForSearch: -1
-            });
 
-        });
     </script>
 </body>
 </html>
