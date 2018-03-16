@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Auth;
 
 class HomeController extends Controller
 {
@@ -23,6 +26,13 @@ class HomeController extends Controller
      */
     public function index()
     {
+//        $users = DB::table('users')
+//            ->select('role')
+//            ->where('id', Auth::id())
+//            ->get();
+
+//        $users = DB::select('select * from users ');
+
         return view('home');
     }
 }

@@ -82,14 +82,26 @@ body{
 }
 .drop_stl{
 	width: 280px;
-    height: 385px;
+    height: 371px;
+    margin-top: 7px;
+    margin-left: -60px;
+}
+.drop_stl2{
+	width: 280px;
+    height: 265px;
+    margin-top: 7px;
+    margin-left: -60px;
+}
+.drop_stl3{
+	width: 280px;
+    height: 240px;
     margin-top: 7px;
     margin-left: -60px;
 }
 .login_but{
 	color: #fff;
 	background: #dc3c3e;
-	font-family: Roboto-Bold;
+	font-family: Roboto-Regular;
 	font-size: 15px;
     height: 50px;
 }
@@ -181,8 +193,22 @@ body{
 	color: #3c4154;
 	font-size: 15px;
 }
+.logout_but{
+	font-family: Roboto-Medium;
+	color: #3c4154;
+	font-size: 15px;
+}
+.logout_but:hover{
+	color: #3c4154;
+}
 .register_but:hover{
 	color: #3c4154;
+}
+.ul-login{
+	font-family: Roboto-Medium;
+	color: #3c4154;
+	font-size: 15px;
+	margin-top: 5px;
 }
 .mr15{
 	margin-right: 15px;
@@ -312,6 +338,7 @@ body{
 	margin-left: 15px;
 	font-family: Roboto-Regular;
 	color: #fff;
+	line-height: 35px;
 	background: transparent;
 	border: 1px solid #2889c4;
 	height: 50px;
@@ -321,11 +348,18 @@ body{
 .but_set_in{
 	font-family: Roboto-Regular;
 	background-color: #fff;
+	line-height: 35px;
 	font-weight: 600;
 	color: #3d4353;
 	height: 50px;
 	width: 75px;
 	font-size: 16px;
+}
+.but_set_up:hover {
+	color: #fff;
+}
+.but_set_in:hover{
+	color: #000;
 }
 .days_stl{
 	background: #2785b9;
@@ -345,6 +379,9 @@ body{
 	color: #a1a8b0;
     font-size: 25px;
     margin-left: 22px;
+}
+.twet_hov:hover{
+	color: #4292e8;
 }
 .ok_hov:hover{
 	color: #f89406;
@@ -372,4 +409,11 @@ body{
 .logo_poz{
 	margin-top: 25px;
     margin-left: -15px;	
+}
+.badge {
+	border-radius: .50rem;
+}
+.badge-red {
+	color: #fff;
+	background-color: #d34042;
 }

@@ -46,45 +46,96 @@
                             <a class="nav-link dropdown-toggle drop_lk" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <i class="fas fa-user-circle mr8 ico_size"></i> Личный кабинет <span class="caret"></span>
                             </a>
-                            <div class="dropdown-menu drop_stl word_stl" aria-labelledby="navbarDropdown">
-                                <div class="row justify-content-center text-center">
-                                    <div class="col-10">
-                                        <div class="row justify-content-end">
-                                            <div class="col-4">
-                                              <span class="text-center word_stl3 lk_in">Вход</span>
+                                @guest
+                                <div class="dropdown-menu drop_stl word_stl" aria-labelledby="navbarDropdown">
+                                    <div class="row justify-content-center text-center">
+                                        <div class="col-10">
+                                            <div class="row justify-content-end">
+                                                <div class="col-4">
+                                                    <span class="text-center word_stl3 lk_in">Вход</span>
+                                                </div>
+                                                <div class="col-4  col align-self-start text-right">
+                                                    <a href="#" class="times_stl">&times</a>
+                                                </div>
                                             </div>
-                                            <div class="col-4  col align-self-start text-right">
-                                               <a href="#" class="times_stl">&times</a>
+                                            <div class="row justify-content-center mt10">
+                                                <div class="col-md-8">
+                                                    <span class="fast_in">Быстрый вход</span>
+                                                </div>
+                                                <div class="col-md-2">
+                                                    <div class="bor_f">
+                                                        <a href="/" class="soc_ico"><i class="fab fa-facebook-f"></i></a>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-2">
+                                                    <div class="bor_vk">
+                                                        <a href="/" class="soc_ico"><i class="fab fa-vk"></i></a>
+                                                    </div>
+                                                </div>
                                             </div>
-                                        </div>
-                                    <div class="row justify-content-center mt10">
-                                        <div class="col-md-8">
-                                            <span class="fast_in">Быстрый вход</span>
-                                        </div>
-                                        <div class="col-md-2">
-                                            <div class="bor_f">
-                                                <a href="/" class="soc_ico"><i class="fab fa-facebook-f"></i></a>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-2">
-                                            <div class="bor_vk">
-                                                <a href="/" class="soc_ico"><i class="fab fa-vk"></i></a>
-                                            </div>   
                                         </div>
                                     </div>
-                                    <br>
-                                    <input class="form-control login_inp" type="email" placeholder="E-mail">
-                                    <input class="form-control login_inp mt10" type="password" placeholder="Пароль">
-                                    <div class="fpass">
-                                        <a href="/" class="foget_pass">Забыли пароль?</a>
-                                    </div>
-                                    <button class="btn btn-default form-control login_but">Войти</button>
+                                    <form method="POST" action="{{ route('login') }}">
+                                        @csrf
+                                        <div class="px-4 pt-3 pb-0">
+                                            <div class="form-group">
+                                                <input type="email" class="form-control login_inp{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email"  required autofocus  placeholder="E-mail">
+                                            </div>
+                                            <div class="form-group">
+                                                <input type="password" class="form-control login_inp{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" required  placeholder="Пароль">
+                                            </div>
+                                        </div>
+                                        <div class="row justify-content-center text-center">
+                                            <div class="col-10">
+                                                <div class="text-center mb-2">
+                                                    <a href="/" class="foget_pass">Забыли пароль?</a>
+                                                </div>
+                                                <button type="submit" class="btn btn-default form-control login_but mb-2">
+                                                    Войти
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div class="dropdown-divider"></div>
+                                        <div class="text-center">
+                                            <a href="/" class="register_but">Зарегистрироваться <i class="fas fa-arrow-right"></i></a>
+                                        </div>
+                                    </form>
                                 </div>
-                            </div>
-                            <div class="col-12 text-center">
-                                <hr>
-                                <a href="/" class="register_but">Зарегистрироваться <i class="fas fa-arrow-right"></i></a>
-                            </div>
+                                @else
+                               @if(Auth::user()->role == 1)
+                                   <div class="dropdown-menu drop_stl2 word_stl" aria-labelledby="navbarDropdown">
+                                       @else
+                                           <div class="dropdown-menu drop_stl3 word_stl" aria-labelledby="navbarDropdown">
+                                               @endif
+                                        <div class="fx-4 text-center">
+                                            <span class="">Добро пожаловать,
+                                                <br>
+                                                {{Auth::user()->name}}!
+                                            </span>
+                                        </div>
+                                        <div class="dropdown-divider"></div>
+                                        <div class="fx-4 text-center">
+                                            <ul class="list-group list-group-flush">
+                                                <li class="list-group"><a href="/" class="ul-login">Личные данные</a></li>
+                                                <li class="list-group"><a href="/" class="ul-login">Мой избирательный участок</a></li>
+                                                <li class="list-group"><a href="/" class="ul-login">Уведомления <span class="badge badge-red">3</span></a></li>
+                                                <li class="list-group"><a href="/" class="ul-login">Анкета</a></li>
+                                                @if(Auth::user()->role == 1)
+                                                <li class="list-group"><a href="/" class="ul-login">Обратиться в комиссию</a></li>
+                                                @endif
+                                            </ul>
+                                        </div>
+                                        <div class="dropdown-divider"></div>
+                                        <div class="text-center">
+                                            <a class="logout_but" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                                                Выйти
+                                            </a>
+                                        </div>
+                                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                            @csrf
+                                        </form>
+                                    </div>
+                                @endguest
                         </li>
                             <!--  -->
                     </ul>
@@ -172,7 +223,7 @@
                         <div class="col-md-3 text-right ">
                             <a href="/" class="soc_icon_foot"><i class="fab fa-facebook-f"></i></a>
                             <a href="/" class="soc_icon_foot"><i class="fab fa-vk"></i></a>
-                            <a href="/" class="soc_icon_foot"><i class="fab fa-twitter"></i></a>
+                            <a href="/" class="soc_icon_foot twet_hov"><i class="fab fa-twitter"></i></a>
                             <a href="/" class="soc_icon_foot ok_hov"><i class="fab fa-odnoklassniki"></i></a>
                         </div>
                     </div>

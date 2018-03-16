@@ -65,8 +65,8 @@
         </span>
         <br>
         <div class="mt15">
-	        <button type="button" class="btn btn-default but_set_in"><span class="but_log">Войти</span></button>
-	        <button type="button" class="btn btn-default but_set_up"><span class="but_reg">Зарегистрироваться</span></button>
+	        <a href="/login" class="btn btn-default but_set_in"><span class="but_log">Войти</span></a>
+	        <a href="/register" class="btn btn-default but_set_up"><span class="but_reg">Зарегистрироваться</span></a>
 	    </div>
       </div>
       <div class="col-md days_stl text-left">
