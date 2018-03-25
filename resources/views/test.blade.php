@@ -6,7 +6,7 @@
     <div class="row  ">
       <div class="col-md-1 ">
         <a href="/">
-          <img src="{{ asset('/images/logo.png') }}" alt="">
+          <img src="{{ asset('/img/emblem.svg') }}" class="logo">
         </a>
       </div>
       <div class="col-md-3  text-left logo_poz">

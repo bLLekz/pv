@@ -6,7 +6,7 @@
     <div class="row  ">
       <div class="col-md-1 ">
         <a href="/">
-          <img src="{{ asset('/images/logo.png') }}" alt="">
+          <img src="{{ asset('/img/emblem.svg') }}" class="logo">
         </a>
       </div>
       <div class="col-md-3  text-left logo_poz">
@@ -54,7 +54,7 @@
         </span>
         <br>
         <div class="mt15">
-	        <a href="/" class="more_info ">Подробнее <i class="fas fa-caret-right ml5"></i></a>
+	        <a href="/questions" class="more_info ">Подробнее <i class="fas fa-caret-right ml5"></i></a>
 	        </div>
       </div>
       <div class="col-md text-left">

@@ -7,11 +7,14 @@
 
     <!-- CSRF Token --> 
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <title>ПроВыборы</title>
+    <title>ПроВыборы - Сделай свой выбор правильно</title>
 
+    <!-- favicon -->
+    <link rel="shortcut icon" href="{{{ asset('img/favicon.png') }}}">
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('css/style.css') }}" rel="stylesheet">
+
     <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css" rel="stylesheet" />
 
     <!-- FontAwesome -->
@@ -48,47 +51,49 @@
                             </a>
                                 @guest
                                 <div class="dropdown-menu drop_stl word_stl" aria-labelledby="navbarDropdown">
-                                    <div class="row justify-content-center text-center">
-                                        <div class="col-10">
-                                            <div class="row justify-content-end">
-                                                <div class="col-4">
-                                                    <span class="text-center word_stl3 lk_in">Вход</span>
-                                                </div>
-                                                <div class="col-4  col align-self-start text-right">
-                                                    <a href="#" class="times_stl">&times</a>
-                                                </div>
-                                            </div>
-                                            <div class="row justify-content-center mt10">
-                                                <div class="col-md-8">
-                                                    <span class="fast_in">Быстрый вход</span>
-                                                </div>
-                                                <div class="col-md-2">
-                                                    <div class="bor_f">
-                                                        <a href="/" class="soc_ico"><i class="fab fa-facebook-f"></i></a>
+                                        <div class="text-right">
+                                            <span class="times_stl">&times</span>
+                                        </div>
+                                    <form action="">
+                                        <div class="row justify-content-center text-center">
+                                            <div class="col-10">
+                                                <div class="row justify-content-end">
+                                                    <div class="col">
+                                                        <span class="text-center word_stl3 lk_in">Вход</span>
                                                     </div>
                                                 </div>
-                                                <div class="col-md-2">
-                                                    <div class="bor_vk">
-                                                        <a href="/" class="soc_ico"><i class="fab fa-vk"></i></a>
+                                                <div class="row justify-content-center mt10">
+                                                    <div class="col-md-8">
+                                                        <span class="fast_in">Быстрый вход</span>
+                                                    </div>
+                                                    <div class="col-md-2">
+                                                        <div class="bor_f">
+                                                            <a href="/" class="soc_ico"><i class="fab fa-facebook-f"></i></a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-2">
+                                                        <div class="bor_vk">
+                                                            <a href="/" class="soc_ico"><i class="fab fa-vk"></i></a>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
+                                    </form>
                                     <form method="POST" action="{{ route('login') }}">
                                         @csrf
                                         <div class="px-4 pt-3 pb-0">
                                             <div class="form-group">
-                                                <input type="email" class="form-control login_inp{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email"  required autofocus  placeholder="E-mail">
+                                                <input type="email" class="form-control login_inp" name="email"  required  placeholder="E-mail">
                                             </div>
                                             <div class="form-group">
-                                                <input type="password" class="form-control login_inp{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" required  placeholder="Пароль">
+                                                <input type="password" class="form-control login_inp" name="password" required  placeholder="Пароль">
                                             </div>
                                         </div>
                                         <div class="row justify-content-center text-center">
                                             <div class="col-10">
                                                 <div class="text-center mb-2">
-                                                    <a href="/" class="foget_pass">Забыли пароль?</a>
+                                                    <a href="{{ route('password.request') }}" class="foget_pass">Забыли пароль?</a>
                                                 </div>
                                                 <button type="submit" class="btn btn-default form-control login_but mb-2">
                                                     Войти
@@ -97,17 +102,24 @@
                                         </div>
                                         <div class="dropdown-divider"></div>
                                         <div class="text-center">
-                                            <a href="/" class="register_but">Зарегистрироваться <i class="fas fa-arrow-right"></i></a>
+                                            <a href="" class="register_but">Зарегистрироваться <i class="fas fa-arrow-right"></i></a>
                                         </div>
                                     </form>
                                 </div>
                                 @else
-                               @if(Auth::user()->role == 1)
+                                @if(Auth::user()->role == 1)
                                    <div class="dropdown-menu drop_stl2 word_stl" aria-labelledby="navbarDropdown">
+                                       <div class="text-right">
+                                           <span class="times_stl">&times</span>
+                                       </div>
                                        @else
                                            <div class="dropdown-menu drop_stl3 word_stl" aria-labelledby="navbarDropdown">
+                                               <div class="text-right">
+                                                   <span class="times_stl">&times</span>
+                                               </div>
                                                @endif
-                                        <div class="fx-4 text-center">
+                                       <form action="">
+                                       <div class="fx-4 text-center">
                                             <span class="">Добро пожаловать,
                                                 <br>
                                                 {{Auth::user()->name}}!
@@ -131,6 +143,7 @@
                                                 Выйти
                                             </a>
                                         </div>
+                                       </form>
                                         <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                             @csrf
                                         </form>
@@ -157,7 +170,7 @@
                                         23 00 78
                                     </span>
                                     <br>
-                                    <span class="content_foot">
+                                    <span class="content_foot_text">
                                         Избирательная комиссия Вологодской области
                                     </span>
                                     </div>
@@ -167,7 +180,7 @@
                                         8 495 606 98 88
                                     </span>
                                     <br>
-                                    <span class="content_foot">
+                                    <span class="content_foot_text">
                                         Центральная избирательная комиссия
                                     </span>
                                 </div>
@@ -182,8 +195,8 @@
                                         <li><a href="/info" class="content_foot">Информация о выборах</a></li>
                                         <li><a href="/consignment" class="content_foot">Политические партии</a></li>
                                         <li><a href="/where" class="content_foot">Где голосовать?</a></li>
-                                        <li><a href="/" class="content_foot">Контакты</a></li>
-                                        <li><a href="/" class="content_foot">Статистика прошедших выборов</a></li>
+                                        <li><a href="/contacts" class="content_foot">Контакты</a></li>
+                                        <li><a href="/stat" class="content_foot">Статистика прошедших выборов</a></li>
                                     </ul>
                                 </nav>
                         </div>
@@ -193,10 +206,10 @@
                             </span>
                             <nav class="navbar ml-15">
                                 <ul class="navbar-nav mr-auto">
-                                    <li><a href="/" class="content_foot">Помощь в телеграмм</a></li>
-                                    <li><a href="/" class="content_foot">Частые вопросы</a></li>
-                                    <li><a href="/" class="content_foot">Обратиться в коммисию</a></li>
-                                    <li><a href="/" class="content_foot">О защите персональных данных</a></li>
+                                    <li><a href="/help" class="content_foot">Помощь в телеграмм</a></li>
+                                    <li><a href="/questions" class="content_foot">Частые вопросы</a></li>
+                                    <li><a href="/apply" class="content_foot">Обратиться в комиссию</a></li>
+                                    <li><a href="/guard" class="content_foot">О защите персональных данных</a></li>
                                 </ul>
                             </nav>
                         </div>
@@ -207,9 +220,9 @@
                             </span>
                             <nav class="navbar ml-15">
                                 <ul class="navbar-nav mr-auto">
-                                    <li><a href="/" class="content_foot">Центральная избирательная комиссия Российской Федерации</a></li>
-                                    <li><a href="/" class="content_foot">Ссылка 2</a></li>
-                                    <li><a href="/" class="content_foot">Ссылка 3</a></li>
+                                    <li><a href="http://www.cikrf.ru/" class="content_foot">Центральная избирательная комиссия Российской Федерации</a></li>
+                                    <li><a href="/link2" class="content_foot">Ссылка 2</a></li>
+                                    <li><a href="/link3" class="content_foot">Ссылка 3</a></li>
                                 </ul>
                             </nav>
                         </div>

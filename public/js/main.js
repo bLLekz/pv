@@ -37,6 +37,7 @@ function onScroll(event){
         }
     });
 }
+//
 $(document).ready(function() {
     $(".js-example-diacritics").select2();
     $('.js-example-diacritics').select2({
@@ -44,6 +45,7 @@ $(document).ready(function() {
     });
 
 });
+//
 
 // $(function() {
 //     $('.btn_edit_save').click(function() {
@@ -61,6 +63,8 @@ $(document).ready(function() {
 //         });
 //     });
 // });
+
+//
 $(document).ready(function(){
     $('#sel_search').change(function(){
         if($(this).val() == 1) {
@@ -73,3 +77,24 @@ $(document).ready(function(){
         }
     });
 });
+//
+$(document).ready(function(){
+    $('.content_foot').each(function () {
+        var location = window.location.href;
+        var link = this.href;
+        if(location == link) {
+            $(this).addClass('active_link_footer');
+        }
+    });
+});
+//
+$(document).ready(function(){
+    $('.nav_main').each(function () {
+        var location = window.location.href;
+        var link = this.href;
+        if(location == link) {
+            $(this).addClass('active_link');
+        }
+    });
+});
+//

@@ -1,30 +1,14 @@
-@extends('layouts.app')
+@extends('layouts.second')
 
 @section('content')
-<div class="contaner-fluid child">
   <div class="container">
     <div class="row">
-      <div class="col-md-1 ">
-        <a href="/">
-          <img src="{{ asset('/images/logo.png') }}" alt="">
-        </a>
-      </div>
-      <div class="col-md-3  text-left logo_poz">
-        <a href="/" class="logo_hov">
-        <span class="logo1">ПроВыборы</span>
-        <br>
-        <span class="logo2">Сделай свой выбор правильно</span>
-        </a>
-      </div>
-      <nav class="navbar navbar-expand-md ml-auto mt15">
-        <ul class="navbar-nav  word_stl">
-         <li><div class="mrml335"><a href="/info" class="nav_main">Информация о выборах</a></div></li>
-         <li><div class="mrml335"><a href="/consignment" class="nav_main active_link">Политические партии</a></div></li>
-         <li><div class="mrml335"><a href="/where" class="nav_main">Где голосовать?</a></div></li>
-         <li><div class="mrml335"><a href="/questions" class="nav_main">Частые вопросы</a></div></li>
-        </ul>
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="/" class="bread_a">Главная</a></li>
+          <li class="breadcrumb-item active" aria-current="page"><a href="/consignment" class="bread_a">Политические партии</a></li>
+        </ol>
       </nav>
     </div>
   </div>
-</div>
 @endsection

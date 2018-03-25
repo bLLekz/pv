@@ -164,6 +164,11 @@ body{
 	margin-top: 10px;
 }
 .times_stl{
+    position: absolute;
+    z-index: 1;
+    top: 0px;
+    left: 255px;
+    cursor: pointer;
 	font-family: Roboto-Bold;
 	font-size: 18px;
 	color: #444853;
@@ -234,11 +239,14 @@ body{
 .active_link{
 	color: #9adcf9 !important;
 }
+.active_link_footer{
+	color: #007bff !important;
+}
 .nav_main:hover{
 	text-decoration: none;
 	color: #9adcf9 !important;
 }
-.nav_main:active, .nav_main:focus{
+.nav_main:active, .nav_main:focus {
 	text-decoration: none;
 	color: #9adcf9 !important;
 }
@@ -273,19 +281,23 @@ body{
 	border: none;
 }
 .inp_search2::-webkit-input-placeholder{
-	color:#83868b;font-family: Roboto-Regular;
+	color:#83868b;
+    font-family: Roboto-Regular;
 	font-size:16px;
 }
 .inp_search2::-moz-placeholder{
-	color:#83868b;font-family: Roboto-Regular;
+	color:#83868b;
+    font-family: Roboto-Regular;
 	font-size:16px;
 }/* Firefox 19+ */
 .inp_search2:-moz-placeholder{
-	color:#83868b;font-family: Roboto-Regular;
+	color:#83868b;
+    font-family: Roboto-Regular;
 	font-size:16px;
 }/* Firefox 18- */
 .inp_search2:-ms-input-placeholder{
-	color:#83868b;font-family: Roboto-Regular;
+	color:#83868b;
+    font-family: Roboto-Regular;
 	font-size:16px;
 }
 
@@ -397,8 +409,12 @@ body{
 .content_foot{
 	color: #636771;
 }
+.content_foot_text{
+	color: #636771;
+}
 .content_foot:hover{
 	text-decoration: none;
+    color: #007bff;
 }
 .mt50{
 	margin-top: 50px;
@@ -410,10 +426,70 @@ body{
 	margin-top: 25px;
     margin-left: -15px;	
 }
+.logo{
+    width: 100%;
+    margin-top: 10px;
+}
 .badge {
 	border-radius: .50rem;
 }
 .badge-red {
 	color: #fff;
 	background-color: #d34042;
+}
+.active_footer{
+	color: #0056b3;
+}
+header {
+    background: #1f77b2 url(../img/bg-emblem.png) no-repeat left bottom;
+    height: 497px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    min-width: 1140px;
+}
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.header-content_title {
+    font-family: Roboto-Bold, sans-serif;
+    font-size: 22.6pt;
+    color: #fff;
+    margin-bottom: 0;
+    margin-left: 45px;
+}
+.header-content_title span {
+    font-family: Roboto-Regular, sans-serif;
+    font-size: 18.15pt;
+}
+.header-content_title a {
+    color: #fff;
+    font-family: Roboto-Regular, sans-serif;
+    font-size: 18.15pt;
+    text-decoration: none;
+}
+.breadcrumb {
+    background-color: transparent;
+}
+.bread_a{
+    color: #1b1b63;
+}
+.bread_a:hover{
+    /*color: #1b1b63;*/
+    text-decoration: none;
+}
+.content_stl{
+    background: linear-gradient(to bottom, #a4cbff00, #cbcbf71a);
+    height: 450px;
+}
+.info_text{
+    font-family: Roboto-Bold;
+    font-size: 23pt;
+}
+.info_text2{
+    font-family: Roboto-Regular;
+    font-size: 12pt;
+
 }
