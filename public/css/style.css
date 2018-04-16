@@ -493,3 +493,45 @@ header {
     font-size: 12pt;
 
 }
+.lk_izb{
+    font-family: Roboto-Bold;
+    font-size: 21pt;
+    color: #3b4255;
+}
+.lk_con{
+	height: 1000px;
+	text-align: center;
+	/*background: #ddd;*/
+	color: #000;
+	/*border: 1px solid #000;*/
+}
+.lk_menu_list{
+    height: 715px;
+    background: #fff;
+    border-radius: 4px;
+}
+.ul-lk{
+    font-family: Roboto-Regular;
+    color: #fff;
+    font-size: 15px;
+    margin-top: 10px;
+    margin-left: 15px;
+}
+.ul-lk:hover{
+    color: #fff;
+    text-decoration: none;
+    background-color: #0086c5;
+
+}
+.lk_menu{
+    color: #fff;
+    height: 260px;
+    background: #0077b1;
+    border-radius: 4px;
+}
+.req_cik{
+    margin-top: 20px;
+    background: #fff;
+    height: 65px;
+    line-height: 3.4;
+}

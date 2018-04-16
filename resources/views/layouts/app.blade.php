@@ -128,7 +128,7 @@
                                         <div class="dropdown-divider"></div>
                                         <div class="fx-4 text-center">
                                             <ul class="list-group list-group-flush">
-                                                <li class="list-group"><a href="/" class="ul-login">Личные данные</a></li>
+                                                <li class="list-group"><a href="/personal" class="ul-login">Личные данные</a></li>
                                                 <li class="list-group"><a href="/" class="ul-login">Мой избирательный участок</a></li>
                                                 <li class="list-group"><a href="/" class="ul-login">Уведомления <span class="badge badge-red">3</span></a></li>
                                                 <li class="list-group"><a href="/" class="ul-login">Анкета</a></li>
