@@ -128,12 +128,18 @@
                                         <div class="dropdown-divider"></div>
                                         <div class="fx-4 text-center">
                                             <ul class="list-group list-group-flush">
+                                                @if(Auth::user()->role == 1)
                                                 <li class="list-group"><a href="/personal" class="ul-login">Личные данные</a></li>
                                                 <li class="list-group"><a href="/" class="ul-login">Мой избирательный участок</a></li>
                                                 <li class="list-group"><a href="/" class="ul-login">Уведомления <span class="badge badge-red">3</span></a></li>
                                                 <li class="list-group"><a href="/" class="ul-login">Анкета</a></li>
-                                                @if(Auth::user()->role == 1)
                                                 <li class="list-group"><a href="/" class="ul-login">Обратиться в комиссию</a></li>
+                                                @else
+                                                    <li class="list-group"><a href="/personal" class="ul-login">Личные данные</a></li>
+                                                    <li class="list-group"><a href="/" class="ul-login">Мой избирательный участок</a></li>
+                                                    <li class="list-group"><a href="/" class="ul-login">Сведения о карточке</a></li>
+                                                    <li class="list-group"><a href="/" class="ul-login">Уведомления <span class="badge badge-red">3</span></a></li>
+                                                    {{--<li class="list-group"><a href="/" class="ul-login">Анкета</a></li>--}}
                                                 @endif
                                             </ul>
                                         </div>

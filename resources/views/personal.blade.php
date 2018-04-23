@@ -13,15 +13,17 @@
             <div class="col-md-12 mt-5 mb-5  text-center">
                 <span class="lk_izb">Личный кабинет избирателя</span>
             </div>
-            <div class="col-md-4 lk_menu">
-                <div class="fx-4 text-left">
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group"><a href="/personal" class="ul-lk">Личные данные</a></li>
-                        <li class="list-group"><a href="/" class="ul-lk">Мой избирательный участок</a></li>
-                        <li class="list-group"><a href="/" class="ul-lk">Уведомления <span class="badge badge-red">3</span></a></li>
-                        <li class="list-group"><a href="/" class="ul-lk">Анкета</a></li>
-                        <li class="list-group"><a href="/" class="btn btn-light req_cik ul-login">Обратиться в комиссию</a></li>
-                    </ul>
+            <div class="col-md-4 "><!-- lk_menu -->
+                <div class="lk_menu">
+                    <div class="fx-4 text-left">
+                        <ul class="list-group list-group-flush pt-3">
+                            <li class="list-group li_hov"><a href="/personal" class="ul-lk">Личные данные</a></li>
+                            <li class="list-group li_hov"><a href="/" class="ul-lk">Мой избирательный участок</a></li>
+                            <li class="list-group li_hov"><a href="/" class="ul-lk">Уведомления <span class="badge badge-red">3</span></a></li>
+                            <li class="list-group li_hov"><a href="/" class="ul-lk">Анкета</a></li>
+                            <li class="list-group"><a href="/" class="btn req_cik ul-login">Обратиться в комиссию</a></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
             <div class="col-md-8 lk_menu_list"></div>
@@ -29,17 +31,19 @@
                 <div class="col-md-12 mt-5 mb-5  text-center">
                     <span class="lk_izb">Личный кабинет кандидата</span>
                 </div>
-                <div class="col-md-4 lk_menu">
-                    <div class="fx-4 text-left">
-                        <ul class="list-group list-group-flush">
-                            <li class="list-group"><a href="/personal" class="ul-lk">Личные данные</a></li>
-                            <li class="list-group"><a href="/" class="ul-lk">Мой избирательный участок</a></li>
-                            <li class="list-group"><a href="/" class="ul-lk">Уведомления <span class="badge badge-red">3</span></a></li>
-                            {{--<li class="list-group"><a href="/" class="ul-lk">Анкета</a></li>--}}
-                        </ul>
+                <div class="col-md-4">
+                    <div class="lk_menu2">
+                        <div class="fx-4 text-left">
+                            <ul class="list-group list-group-flush pt-3">
+                                <li class="list-group"><a href="/personal" class="ul-lk">Личные данные</a></li>
+                                <li class="list-group"><a href="/" class="ul-lk">Сведения о карточке</a></li>
+                                <li class="list-group"><a href="/" class="ul-lk">Уведомления <span class="badge badge-red">3</span></a></li>
+                                {{--<li class="list-group"><a href="/" class="ul-lk">Анкета</a></li>--}}
+                            </ul>
+                        </div>
                     </div>
                 </div>
-                <div class="col-md-8 lk_menu_list">qwe</div>
+                <div class="col-md-8 lk_menu_list"></div>
             @endif
         </div>
     </div>
