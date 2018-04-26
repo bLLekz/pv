@@ -98,3 +98,12 @@ $(document).ready(function(){
     });
 });
 //
+$(document).ready(function(){
+    $('.ul_lk').each(function () {
+        var location = window.location.href;
+        var link = this.href;
+        if(location == link) {
+            $(this).parent().addClass('active_link_lk');
+        }
+    });
+});

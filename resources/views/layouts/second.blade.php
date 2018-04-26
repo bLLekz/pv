@@ -102,7 +102,7 @@
                                 </div>
                                 <div class="dropdown-divider"></div>
                                 <div class="text-center">
-                                    <a href="" class="register_but">Зарегистрироваться <i class="fas fa-arrow-right"></i></a>
+                                    <a href="/register" class="register_but">Зарегистрироваться <i class="fas fa-arrow-right"></i></a>
                                 </div>
                             </form>
                         </div>
@@ -128,12 +128,17 @@
                                                 <div class="dropdown-divider"></div>
                                                 <div class="fx-4 text-center">
                                                     <ul class="list-group list-group-flush">
-                                                        <li class="list-group"><a href="/personal" class="ul-login">Личные данные</a></li>
-                                                        <li class="list-group"><a href="/" class="ul-login">Мой избирательный участок</a></li>
-                                                        <li class="list-group"><a href="/" class="ul-login">Уведомления <span class="badge badge-red">3</span></a></li>
-                                                        <li class="list-group"><a href="/" class="ul-login">Анкета</a></li>
                                                         @if(Auth::user()->role == 1)
+                                                            <li class="list-group"><a href="/personal" class="ul-login">Личные данные</a></li>
+                                                            <li class="list-group"><a href="/station" class="ul-login">Мой избирательный участок</a></li>
+                                                            <li class="list-group"><a href="/message" class="ul-login">Уведомления <span class="badge badge-red">3</span></a></li>
+                                                            <li class="list-group"><a href="/" class="ul-login">Анкета</a></li>
                                                             <li class="list-group"><a href="/" class="ul-login">Обратиться в комиссию</a></li>
+                                                        @else
+                                                            <li class="list-group"><a href="/personal" class="ul-login">Личные данные</a></li>
+                                                            <li class="list-group"><a href="/station" class="ul-login">Сведения о карточке</a></li>
+                                                            <li class="list-group"><a href="/message" class="ul-login">Уведомления <span class="badge badge-red">3</span></a></li>
+                                                            {{--<li class="list-group"><a href="/" class="ul-login">Анкета</a></li>--}}
                                                         @endif
                                                     </ul>
                                                 </div>
@@ -257,7 +262,7 @@
                     <div class="fake_hr"></div>
                 </div>
                 <div class="row mt10">
-                    <div class="col-md-3 text-left content_foot ">Provibori.ru 2017-2018 г.</div>
+                    <div class="col-md-3 text-left content_foot_text ">Provibori.ru 2017-2018 г.</div>
                     <div class="col-md-6 "></div>
                     <div class="col-md-3 text-right ">
                         <a href="/" class="soc_icon_foot"><i class="fab fa-facebook-f"></i></a>

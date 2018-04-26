@@ -24,3 +24,5 @@ Route::get('/consignment', 'ConsignmentController@consignment')->name('consignme
 Route::get('/where', 'WhereController@where')->name('where');
 Route::get('/questions', 'QuestionsController@questions')->name('questions');
 Route::get('/personal', 'PersonalController@personal')->name('personal');
+Route::get('/station', 'StationController@station')->name('station');
+Route::get('/message', 'MessageController@message')->name('message');
