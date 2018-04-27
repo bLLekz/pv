@@ -483,16 +483,28 @@ header {
 }
 .content_stl{
     background: linear-gradient(to bottom, #a4cbff00, #cbcbf71a);
-    height: 450px;
+    /*height: 450px;*/
 }
 .info_text{
     font-family: Roboto-Bold;
     font-size: 23pt;
+	color: #3b4255;
 }
 .info_text2{
     font-family: Roboto-Regular;
     font-size: 12pt;
-
+	color: #3b4255;
+}
+.info_text3{
+    font-family: Roboto-Medium;
+    font-size: 16pt;
+	color: #3b4255;
+}
+.info_text4{
+    font-family: Roboto-Regular;
+    font-size: 13pt;
+	color: #3b4255;
+	margin-top: -10px;
 }
 .lk_izb{
     font-family: Roboto-Bold;
@@ -708,4 +720,20 @@ header {
 	width: 90px;
 	margin-left: 15px;
 }
-
+.hrstl{
+	width: 95%;
+}
+.btn_light{
+	font-family: Roboto-Bold;
+	border-radius: 2px;
+	background: #f1f4f9;
+	border: 1px solid #dfe3e6;
+	color: #3b4255;
+	width: 120px;
+	height: 50px;
+}
+.quest_stl{
+	font-family: Roboto-Bold;
+	font-size: 16px;
+	color: #3b4255;
+}
