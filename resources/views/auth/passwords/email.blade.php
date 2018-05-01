@@ -1,47 +1,52 @@
-@extends('layouts.app')
+@extends('layouts.second')
 
 @section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card card-default">
-                <div class="card-header">Reset Password</div>
+    <div class="container-fluid content_stl">
+        <div class="container">
+            <div class="row mb-3">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="/" class="bread_a">Главная</a></li>
+                        <li class="breadcrumb-item active" aria-current="page"><a href="/password/reset" class="bread_a">Восстановление пароля</a></li>
+                    </ol>
+                </nav>
+            </div>
+            <div class="row mt-5 pb-5 text-left">
+                <div class="col-12">
+                    <p class="info_text">Восстановление пароля</p>
+                    <p>На ваш e-mail будет отправлен текущий пароль</p>
 
-                <div class="card-body">
-                    @if (session('status'))
-                        <div class="alert alert-success">
-                            {{ session('status') }}
-                        </div>
-                    @endif
+                {{--<input type="email" class="form-control col-4" placeholder="E-mail">--}}
+                {{--<button class="btn btn-danger">Отправить</button>--}}
+                @if (session('status'))
+                    <div class="alert alert-success">
+                        {{ session('status') }}
+                    </div>
+                @endif
 
-                    <form method="POST" action="{{ route('password.email') }}">
-                        @csrf
+                <form method="POST" action="{{ route('password.email') }}">
+                    @csrf
 
-                        <div class="form-group row">
-                            <label for="email" class="col-md-4 col-form-label text-md-right">E-Mail Address</label>
-
-                            <div class="col-md-6">
-                                <input id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" required>
-
-                                @if ($errors->has('email'))
-                                    <span class="invalid-feedback">
+                    <div class="row">
+                        <div class="col-4">
+                            <input id="email" type="email" placeholder="E-mail" class=" res_pass_inp form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" required>
+                            @if ($errors->has('email'))
+                                <span class="invalid-feedback">
                                         <strong>{{ $errors->first('email') }}</strong>
                                     </span>
-                                @endif
-                            </div>
+                            @endif
                         </div>
+                        <div class="col">
+                            <button type="submit" class="btn btn-danger res_pass_btn ">
+                                Отправить
+                            </button>
+                        </div>
+                    </div>
 
-                        <div class="form-group row mb-0">
-                            <div class="col-md-6 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
-                                    Send Password Reset Link
-                                </button>
-                            </div>
-                        </div>
-                    </form>
+                </form>
+
                 </div>
             </div>
         </div>
     </div>
-</div>
 @endsection

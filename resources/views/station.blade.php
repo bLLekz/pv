@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="container lk_con">
-        <div class="row">
+        <div class="row pb-5">
             <nav aria-label="breadcrumb">
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a href="/" class="bread_a">Главная</a></li>
@@ -28,7 +28,28 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-8 lk_menu_list"></div>
+                <div class="col-md-8 mb-5">
+                    <div class="lk_menu_list pb-5">
+                        <div class="text-left text_lk ">
+                            <p class="lk">Мой избирательный участок</p>
+                            <p class="presonal_date">Для получения информации о месте голосования, воспользуйтесь поиском.</p>
+                            <p class="presonal_date">Для этого введите адрес места регистрации:</p>
+                            <input type="text" class="form-control inpt_lk" id="search_inp_lk" placeholder="Начните вводить адрес места регистации, начания с области">
+                            <button class="btn btn-danger">Найти</button>
+                        </div>
+                        <hr>
+                        <div class="text-left text_lk ">
+                            <p class="lk">Избирательный участок №870</p>
+                            <p class="presonal_date">Для адреса: Вологодская область, г. Череповец, ул. Ленина 155</p>
+                            <p class="">Адрес помещения для голосования:</p>
+                            <p class="">Контактный телефон:</p>
+                            <p class="presonal_date">8(8202)62-50-89</p>
+                            <p class="">Дополнительная информация:</p>
+                            <p class="presonal_date">Наличие пандуса/подъемника для инвалидов.</p>
+                            <a href="https://yandex.ru/maps/?um=constructor%3A1a17a7c314593b5a71dda36234cf2fb7d438c4c66ea0ceca4e63f0c7156fd9ad&amp;source=constructorStatic" target="_blank"><img src="https://api-maps.yandex.ru/services/constructor/1.0/static/?um=constructor%3A1a17a7c314593b5a71dda36234cf2fb7d438c4c66ea0ceca4e63f0c7156fd9ad&amp;width=600&amp;height=320&amp;lang=ru_RU" alt="" style="border: 0;" class="ml-auto mr-auto" /></a>
+                        </div>
+                    </div>
+                </div>
             @else
                 <div class="col-md-12 mt-5 mb-5  text-center">
                     <span class="lk_izb">Личный кабинет кандидата</span>
@@ -45,7 +66,9 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-8 lk_menu_list"></div>
+                <div class="col-md-8 lk_menu_list">
+
+                </div>
             @endif
         </div>
     </div>

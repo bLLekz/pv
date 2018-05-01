@@ -190,7 +190,7 @@
         @yield('content')
     </main>
 
-    <footer class="foot">
+    <footer class="foot pb-3">
         <div class="container-fluid ">
             <div class="container">
                 <div class="row ">

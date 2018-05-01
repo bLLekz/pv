@@ -737,3 +737,61 @@ header {
 	font-size: 16px;
 	color: #3b4255;
 }
+.res_pass_inp{
+	font-family: Roboto-Regular;
+	font-size: 15px;
+	color: #3b4255;
+	height: 45px;
+}
+.res_pass_btn{
+	font-family: Roboto-Regular;
+	font-size: 15px;
+	height: 45px;
+}
+.mess_hov:hover{
+	text-decoration: none;
+	background-color: #e3f5ff;
+}
+.lk_menu_list2 {
+	/*height: 715px;*/
+	background: #fff;
+	border-radius: 4px;
+	padding-top: 50px;
+	/*padding-left: 30px;*/
+	/*padding-right: 30px;*/
+}
+.li_mess{
+	font-family: Roboto-Regular;
+	color: #3b4255;
+	font-size: 16px;
+	/*margin-top: 5px;*/
+	/*margin-bottom: 5px;*/
+	/*margin-left: 35px;*/
+
+}
+.li_mess:hover{
+	color: #3b4255;
+	text-decoration: none;
+}
+.mess_more{
+	font-family: Roboto-Bold;
+	color: #3b4255;
+	font-size: 16px;
+}
+.mess_date{
+	font-family: Roboto-Regular;
+	color: #93989c;
+	font-size: 16px;
+}
+.mess_ico{
+	width: 35px;
+	height: 35px;
+	background: #f4f7fc;
+	border-radius: 50%;
+	margin-left: 20px;
+}
+.fa_pos{
+	margin-right: 7.5px;
+	margin-top: 8px;
+	color: #dadde2;
+}

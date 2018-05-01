@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="container lk_con">
-        <div class="row">
+        <div class="row pb-5">
             <nav aria-label="breadcrumb">
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a href="/" class="bread_a">Главная</a></li>
@@ -29,7 +29,7 @@
                 </div>
             </div>
             <div class="col-md-8 mb-5">
-                <div class="lk_menu_list">
+                <div class="lk_menu_list ">
                     <div class="text-left text_lk ">
                         <p class="lk">Личные данные</p>
                         <img src="/img/none.jpg" class="pull-left igm_lk">

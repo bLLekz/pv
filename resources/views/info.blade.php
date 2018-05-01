@@ -19,7 +19,7 @@
           <span class="info_text2">Для получения информации о выборах и кандидатах, воспользуйтесь поиском. <br> Для этого введите адрес места регистрации:</span>
       </div>
     </div>
-      <div class="row mt-5 mb-5">
+      <div class="row mt-5 pb-5">
           <div class="col-md form-control inp_search">
               <div class="row">
                   <div class="col-md-2 mt15">
