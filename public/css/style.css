@@ -149,7 +149,7 @@ body{
 	height: 425px;
 }
 .c{
-	background: #1f77b2;height: 500px; text-align: center;
+	background: #1f77b2;/*height: 500px;*/ text-align: center;
 }
 .child{
 	background: #1f77b2;height: 100px; text-align: center;
@@ -777,6 +777,7 @@ header {
 	font-family: Roboto-Bold;
 	color: #3b4255;
 	font-size: 16px;
+	cursor: pointer;
 }
 .mess_date{
 	font-family: Roboto-Regular;
@@ -794,4 +795,55 @@ header {
 	margin-right: 7.5px;
 	margin-top: 8px;
 	color: #dadde2;
+}
+.inp_parti{
+	height: 65px;
+	border: 1px solid #e0e3e6;
+	border-radius: 2px;
+	border-left: none;
+}
+.inp_ico{
+	border-right: none;
+	background: #fff;
+	border-radius: 2px;
+	border: 1px solid #e0e3e6;
+	color: #949494bf;
+}
+.form-control:focus {
+	color: #000;
+	background-color: #fff;
+	border-color: #e0e3e6;
+	outline: 0;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+}
+.igm_part{
+	border-radius: 50px;
+	/*margin-top: 25px;
+	margin-bottom: 15px;
+	margin-right: 15px;*/
+}
+.sty_title{
+	font-family: Roboto-Bold;
+	color: #3e4150;
+}
+.but_more_part{
+	font-family: Roboto-Bold;
+	color: #3e4150;
+	font-size: 14px;
+	width: 110px;
+	height: 45px;
+	line-height: 30px;
+	background: transparent;
+	border: 1px solid #e0e3e6;
+	cursor: pointer;
+}
+.part_more{
+	font-family: Roboto-Bold;
+	color: #3b4255;
+	font-size: 16px;
+	cursor: pointer;
+}
+.bor_none{
+	border: none;
 }

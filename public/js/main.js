@@ -107,3 +107,19 @@ $(document).ready(function(){
         }
     });
 });
+//
+// $(function() {
+//     $('.but_more_part').click(function() {
+//         $.ajax({
+//             type: "POST",
+//             url: 'consignment',
+//             data:{
+//                 pag :10
+//             },
+//             success: function(data) {
+//                 // $('#result').html(data);
+//                 console.log (data);
+//             }
+//         });
+//     });
+// });
