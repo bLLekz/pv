@@ -120,10 +120,14 @@
                                             @endif
                                             <form action="">
                                                 <div class="fx-4 text-center">
-                                            <span class="">Добро пожаловать,
-                                                <br>
-                                                {{Auth::user()->name}}!
-                                            </span>
+                                                    @if (Auth::user()->name != '')
+                                                        <span class="">Добро пожаловать,
+                                                        <br>
+                                                            {{Auth::user()->name}}!
+                                                        </span>
+                                                    @else
+                                                        <span class="">Добро пожаловать!</span>
+                                                    @endif
                                                 </div>
                                                 <div class="dropdown-divider"></div>
                                                 <div class="fx-4 text-center">
@@ -132,7 +136,7 @@
                                                             <li class="list-group"><a href="/personal" class="ul-login">Личные данные</a></li>
                                                             <li class="list-group"><a href="/station" class="ul-login">Мой избирательный участок</a></li>
                                                             <li class="list-group"><a href="/message" class="ul-login">Уведомления <span class="badge badge-red">3</span></a></li>
-                                                            <li class="list-group"><a href="/" class="ul-login">Анкета</a></li>
+                                                            <li class="list-group"><a href="/form" class="ul-login">Анкета</a></li>
                                                             <li class="list-group"><a href="/" class="ul-login">Обратиться в комиссию</a></li>
                                                         @else
                                                             <li class="list-group"><a href="/personal" class="ul-login">Личные данные</a></li>

@@ -526,6 +526,17 @@ header {
 	padding-left: 30px;
 	padding-right: 170px;
 }
+.lk_menu_list2 {
+	/*height: 715px;*/
+	background: #fff;
+	border-radius: 4px;
+	padding-top: 50px;
+}
+.btn_search_lk{
+    height: 50px;
+    width:100%;
+    margin-left: -20px;
+}
 .ul_lk{
 	font-family: Roboto-Regular;
 	color: #fff;
@@ -641,7 +652,16 @@ header {
 	color: #3b4255;
 }
 .lk{
+    font-family: Roboto-Bold;
+    color: #3b4255;
 	font-size: 23px;
+}
+.lk_check{
+    font-family: Roboto-Regular;
+    color: #3b4255;
+	font-size: 16px;
+    position: relative;
+    top: -7px;
 }
 .load_ph{
 	font-family: Roboto-Regular;
@@ -734,6 +754,11 @@ header {
 }
 .quest_stl{
 	font-family: Roboto-Bold;
+	font-size: 16px;
+	color: #3b4255;
+}
+.text_inpt{
+	font-family: Roboto-Regular;
 	font-size: 16px;
 	color: #3b4255;
 }
@@ -846,4 +871,97 @@ header {
 }
 .bor_none{
 	border: none;
+}
+.bor_search_info{
+	margin-top: 15px;
+	height: 29px;
+}
+.form_text{
+    font-family: Roboto-Regular;
+    color: #3b4255;
+    font-size: 16px;
+}
+.bg_blue{
+    background: #0077b1;
+    font-family: Roboto-Medium;
+    color: #fff;
+}
+.part_more:hover{
+    font-family: Roboto-Bold;
+    color: #3e4150;
+}
+.igm_gang{
+    position: relative;
+        top: -75px;
+    width: 130px;
+    height: 130px;
+    margin-left: 20px;
+    margin-bottom: -80px;
+    border: 1px solid #dedede91;
+    border-radius: 50%;
+}
+.gang_name{
+    font-family: Roboto-Bold;
+    font-size: 23px;
+    color: #3e4150;
+}
+.gang_desc{
+    font-family: Roboto-Medium;
+    font-size: 18px;
+    color: #3e4150;
+}
+.gang_text{
+    font-family: Roboto-Regular;
+    font-size: 16px;
+    color: #3e4150;
+}
+.fa_color{
+    color: #949494bf;
+}
+.link_gang1{
+    font-family: Roboto-Regular;
+    font-size: 15px;
+    color: #3e4150;
+}
+.link_gang:hover{
+    color: #3e4150;
+}
+.link_gang{
+    font-family: Roboto-Regular;
+    font-size: 15px;
+    color: #3e4150;
+}
+.link_gang:hover{
+    color: #3e4150;
+}
+.gang_ul{
+    width:100%;
+}
+.menu_gang{
+    font-family: Roboto-Regular;
+    color: #fff;
+    font-size: 16px;
+}
+.menu_gang:hover{
+    color: #fff;
+}
+.pl_4{
+    padding-left: 35px;
+}
+/*background: #0086c5;*/
+.check_ico{
+    font-size: 35px;
+    color: #99cb98;
+}
+.text_doc{
+    font-family: Roboto-Regular;
+    color: #848484;
+    font-size: 14px;
+}
+.text_doc:hover{
+    color: #848484;
+    font-size: 14px;
+}
+.link_cand{
+    height: 50px;
 }

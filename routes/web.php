@@ -27,3 +27,6 @@ Route::get('/personal', 'PersonalController@personal')->name('personal');
 Route::get('/station', 'StationController@station')->name('station');
 Route::get('/message', 'MessageController@message')->name('message');
 Route::get('/contacts', 'ContactsController@contacts')->name('contacts');
+Route::get('/form', 'FromController@form')->name('form');
+//Route::get('/consignment/gang', 'GangController@gang')->name('gang');
+Route::get('consignment/{id}', 'GangController@Gang')->name('Gang');

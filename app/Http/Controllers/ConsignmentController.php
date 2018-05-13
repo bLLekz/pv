@@ -14,8 +14,8 @@ class ConsignmentController extends Controller
         $consignment = DB::table('consignment')
             ->paginate(10);
             /*->get();*/
-        $qwe = 11;
 
-        return view('consignment',['consignment' => $consignment],['qwe' => $qwe]);
+
+        return view('consignment',['consignment' => $consignment]);
     }
 }

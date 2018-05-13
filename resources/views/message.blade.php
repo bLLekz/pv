@@ -17,10 +17,10 @@
                     <div class="lk_menu">
                         <div class="fx-4 text-left">
                             <ul class="list-group list-group-flush pt-3">
-                                <li class="list-group li_hov"><a href="http://provibori/personal" class="ul_lk">Личные данные</a></li>
+                                <li class="list-group li_hov"><a href="/personal" class="ul_lk">Личные данные</a></li>
                                 <li class="list-group li_hov"><a href="/station" class="ul_lk">Мой избирательный участок</a></li>
                                 <li class="list-group li_hov"><a href="/message" class="ul_lk">Уведомления <span class="badge badge-red">3</span></a></li>
-                                <li class="list-group li_hov"><a href="/" class="ul_lk">Анкета</a></li>
+                                <li class="list-group li_hov"><a href="/form" class="ul_lk">Анкета</a></li>
                                 <li class="list-group"><button data-toggle="modal" data-target="#myModal" class="btn req_cik ul-login">Обратиться в комиссию</button></li>
                                 <li class="list-group">
                                 </li>
@@ -120,7 +120,82 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-8 lk_menu_list"></div>
+                <div class="col-md-8 mb-5">
+                    <div class="lk_menu_list2 pb-5">
+                        <div class="row">
+                            <div class="col">
+                                <div class="text-left text_lk ml-4">
+                                    <p class="lk">Уведомления</p>
+                                </div>
+                                <ul class="list-group list-group-flush pt-3 text-left">
+                                    <li class="list-group mess_hov">
+                                        <a href="/" class="li_mess">
+                                            <div class="row mb-1 mt-3">
+                                                <div class="col-1 text-right">
+                                                    <div class="mess_ico">
+                                                        <i class="far fa-comments fa_pos"></i>
+                                                    </div>
+                                                </div>
+                                                <div class="col-9">
+                                                    <p>
+                                                        12.04.2018 состоятся Выборы депутатов представительных органов муниципальных образований
+                                                        администативных центров (столиц) субъектов Российской Федерации
+                                                    </p>
+                                                    <p class="mess_more">Подробнее <i class="fas fa-caret-right"></i></p>
+                                                </div>
+                                                <div class="col-2 text-left d-flex align-items-end">
+                                                    <p class="mess_date ">25.01.18</p>
+                                                </div>
+                                            </div>
+
+
+                                        </a></li>
+                                    <li class="list-group mess_hov">
+                                        <a href="/" class="li_mess">
+                                            <div class="row mb-1 mt-3">
+                                                <div class="col-1 text-right">
+                                                    <div class="mess_ico">
+                                                        <i class="far fa-comments fa_pos"></i>
+                                                    </div>
+                                                </div>
+                                                <div class="col-9">
+                                                    <p>
+                                                        12.04.2018 состоятся Выборы депутатов представительных органов муниципальных образований
+                                                        администативных центров (столиц) субъектов Российской Федерации
+                                                    </p>
+                                                    <p class="mess_more">Подробнее <i class="fas fa-caret-right"></i></p>
+                                                </div>
+                                                <div class="col-2 text-left d-flex align-items-end">
+                                                    <p class="mess_date ">25.01.18</p>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="list-group mess_hov">
+                                        <a href="/" class="li_mess">
+                                            <div class="row mb-1 mt-3">
+                                                <div class="col-1 text-right">
+                                                    <div class="mess_ico">
+                                                        <i class="far fa-comments fa_pos"></i>
+                                                    </div>
+                                                </div>
+                                                <div class="col-9">
+                                                    <p>
+                                                        Ответ на обращение кандидата Паничева Ольга Анатольевна
+                                                    </p>
+                                                    <p class="mess_more">Подробнее <i class="fas fa-caret-right"></i></p>
+                                                </div>
+                                                <div class="col-2 text-left d-flex align-items-end">
+                                                    <p class="mess_date ">25.01.18</p>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             @endif
         </div>
     </div>
