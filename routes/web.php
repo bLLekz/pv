@@ -18,7 +18,6 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-Route::get('/test', 'TestController@test')->name('test');
 Route::get('/info', 'InfoController@info')->name('info');
 Route::get('/consignment', 'ConsignmentController@consignment')->name('consignment');
 Route::get('/where', 'WhereController@where')->name('where');
@@ -28,5 +27,8 @@ Route::get('/station', 'StationController@station')->name('station');
 Route::get('/message', 'MessageController@message')->name('message');
 Route::get('/contacts', 'ContactsController@contacts')->name('contacts');
 Route::get('/form', 'FromController@form')->name('form');
-//Route::get('/consignment/gang', 'GangController@gang')->name('gang');
 Route::get('consignment/{id}', 'GangController@Gang')->name('Gang');
+Route::get('query', 'SearchController@query');
+//Route::get('/message/{id}', 'MessageController@message')->name('message');
+//test page
+Route::get('/test', 'TestController@test')->name('test');
