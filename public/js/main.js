@@ -108,18 +108,44 @@ $(document).ready(function(){
     });
 });
 //
-// $(function() {
-//     $('.but_more_part').click(function() {
-//         $.ajax({
-//             type: "POST",
-//             url: 'consignment',
-//             data:{
-//                 pag :10
-//             },
-//             success: function(data) {
-//                 // $('#result').html(data);
-//                 console.log (data);
-//             }
-//         });
-//     });
-// });
+$('#search_part').on('keyup',function() {
+    var value = $(this).val();
+    $.ajax({
+        type : 'post',
+        url :'consignment/search',
+        data : {'search':value},
+        headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        },
+        success: function (data) {
+            // console.log(date);
+            $('#result').html(data);
+        }
+    });
+});
+//
+$(document).ready(function(){
+    var global = 10;
+    var all = $('#more_part').attr('date-param');
+    $('#more_part').click(function () {
+        global = parseInt(global) + 10;
+        console.log(all);
+        console.log(global);
+        if( parseInt(all) <= parseInt(global))
+        {
+            $('#more_part').hide();
+
+        }
+        $.ajax({
+            type : 'post',
+            url :'/consignment/more',
+            data : {'more':global},
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            },
+            success: function (data) {
+                $('#result').html(data);
+            }
+        });
+    });
+});

@@ -25,10 +25,10 @@
         </ul>
       </nav>
     </div>
-    <div class="row mt15 d-none d-lg-block d-xl-block">
+    <div class="row mt-3 d-none d-lg-block d-xl-block">
       <div class="col-md form-control inp_search ">
         <div class="row">
-          <div class="col-md-2 mt15">
+          <div class="col-md-2 mt-3">
             <select class="js-example-diacritics"  id="sel_search" name="select_search">
               <option value="1"><span class="search_text">Поиск по участкам</span></option>
               <option value="2"><span class="search_text">Поиск по кандидатам</span></option>
@@ -43,8 +43,8 @@
         </div>
       </div>
     </div>
-    <div class="row mt40">
-      <div class="col-md  text-left">
+    <div class="row mt-5">
+      <div class="col-md-4  text-left">
         <h3 class="big_text">Как пользоватся порталом</h3>
         <span class="big_text2">
           Чтобы получить информацию о выборах, 
@@ -53,23 +53,25 @@
            кандидате, выберите "Поиск по кандидатам".
         </span>
         <br>
-        <div class="mt15">
+        <div class="mt-4">
 	        <a href="/questions" class="more_info ">Подробнее <i class="fas fa-caret-right ml5"></i></a>
 	        </div>
       </div>
-      <div class="col-md text-left">
+      <div class="col-md-4 text-left">
+        @guest
         <h3 class="big_text">Вход в личный кабинет</h3>
         <span class="big_text2">
           Войдите в личный кабинет, чтобы получить
           возможность общаться с кандидатами.
         </span>
         <br>
-        <div class="mt15">
+        <div class="mt-5">
 	        <a href="/login" class="btn btn-default but_set_in"><span class="but_log">Войти</span></a>
 	        <a href="/register" class="btn btn-default but_set_up"><span class="but_reg">Зарегистрироваться</span></a>
 	    </div>
+        @endguest
       </div>
-      <div class="col-md days_stl text-left">
+      <div class="col-md-4 days_stl text-left">
         <span class="big_days">
           117
         </span>

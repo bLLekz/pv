@@ -22,11 +22,11 @@
                         <div class="input-group-prepend">
                             <div class="input-group-text inp_ico"><i class="fas fa-search"></i></div>
                         </div>
-                        <input type="text" class="form-control inp_parti" placeholder="Поиск по партиям">
+                        <input type="text" class="form-control inp_parti" id="search_part" placeholder="Поиск по партиям">
                     </div>
                 </div>
             </div>
-            <div class="row mb-5 mt-4">
+            <div class="row mb-5 mt-4" id="result">
                 @foreach($consignment as $part)
                 <div class="col-md-6 mt-3 mb-3">
                     <div class="card bor_none">
@@ -46,11 +46,8 @@
                 </div>
                 @endforeach
             </div>
-            <div class="row ">
-                    <span class="btn btn-light  but_more_part ml-auto mr-auto">Еще партии</span>
-            </div>
-            <div id="result">
-
+            <div class="row">
+                <span class="btn btn-light  but_more_part ml-auto mr-auto" id="more_part" date-param="{{$all}}">Еще партии</span>
             </div>
         </div>
     </div>
