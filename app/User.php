@@ -10,15 +10,15 @@ use Nicolaslopezj\Searchable\SearchableTrait;
 
 class User extends Authenticatable
 {
-    use Notifiable;
-    use SearchableTrait;
-
-    protected $searchable = [
-        'columns' => [
-            'consignment.name' => 10,
-            'consignment.full_name' => 5,
-        ],
-    ];
+//    use Notifiable;
+//    use SearchableTrait;
+//
+//    protected $searchable = [
+//        'columns' => [
+//            'consignment.name' => 10,
+//            'consignment.full_name' => 5,
+//        ],
+//    ];
 
     public function profile()
     {
@@ -30,7 +30,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'role', 'email', 'password',
     ];
 
     /**

@@ -50,62 +50,129 @@
                                 <i class="fas fa-user-circle mr8 ico_size"></i> Личный кабинет <span class="caret"></span>
                             </a>
                                 @guest
-                                <div class="dropdown-menu drop_stl word_stl" aria-labelledby="navbarDropdown">
-                                        <div class="text-right">
-                                            <span class="times_stl">&times</span>
-                                        </div>
-                                    <form action="">
-                                        <div class="row justify-content-center text-center">
-                                            <div class="col-10">
-                                                <div class="row justify-content-end">
-                                                    <div class="col">
-                                                        <span class="text-center word_stl3 lk_in">Вход</span>
-                                                    </div>
-                                                </div>
-                                                <div class="row justify-content-center mt10">
-                                                    <div class="col-md-8">
-                                                        <span class="fast_in">Быстрый вход</span>
-                                                    </div>
-                                                    <div class="col-md-2">
-                                                        <div class="bor_f">
-                                                            <a href="/" class="soc_ico"><i class="fab fa-facebook-f"></i></a>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-2">
-                                                        <div class="bor_vk">
-                                                            <a href="/" class="soc_ico"><i class="fab fa-vk"></i></a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </form>
-                                    <form method="POST" action="{{ route('login') }}">
-                                        @csrf
-                                        <div class="px-4 pt-3 pb-0">
-                                            <div class="form-group">
-                                                <input type="email" class="form-control login_inp" name="email"  required  placeholder="E-mail">
-                                            </div>
-                                            <div class="form-group">
-                                                <input type="password" class="form-control login_inp" name="password" required  placeholder="Пароль">
-                                            </div>
-                                        </div>
-                                        <div class="row justify-content-center text-center">
-                                            <div class="col-10">
-                                                <div class="text-center mb-2">
-                                                    <a href="{{ route('password.request') }}" class="foget_pass">Забыли пароль?</a>
-                                                </div>
-                                                <button type="submit" class="btn btn-default form-control login_but mb-2">
-                                                    Войти
-                                                </button>
-                                            </div>
-                                        </div>
-                                        <div class="dropdown-divider"></div>
-                                        <div class="text-center">
-                                            <a href="/register" class="register_but">Зарегистрироваться <i class="fas fa-arrow-right"></i></a>
-                                        </div>
-                                    </form>
-                                </div>
+                           <div class="dropdown-menu drop_stl word_stl change_form" aria-labelledby="navbarDropdown">
+                               <div class="text-right">
+                                   <span class="times_stl">&times</span>
+                               </div>
+                               <form action="">
+                                   <div class="row justify-content-center text-center">
+                                       <div class="col-10">
+                                           <div class="row justify-content-end">
+                                               <div class="col">
+                                                   <span class="text-center word_stl3 lk_in">Вход</span>
+                                               </div>
+                                           </div>
+                                           <div class="row justify-content-center mt10">
+                                               <div class="col-md-8">
+                                                   <span class="fast_in">Быстрый вход</span>
+                                               </div>
+                                               <div class="col-md-2">
+                                                   <div class="bor_f">
+                                                       <a href="/" class="soc_ico"><i class="fab fa-facebook-f"></i></a>
+                                                   </div>
+                                               </div>
+                                               <div class="col-md-2">
+                                                   <div class="bor_vk">
+                                                       <a href="/" class="soc_ico"><i class="fab fa-vk"></i></a>
+                                                   </div>
+                                               </div>
+                                           </div>
+                                       </div>
+                                   </div>
+                               </form>
+                               <form method="POST" action="{{ route('login') }}">
+                                   @csrf
+                                   <div class="px-4 pt-3 pb-0">
+                                       <div class="form-group">
+                                           <input type="email" class="form-control login_inp" name="email"  required  placeholder="E-mail">
+                                       </div>
+                                       <div class="form-group">
+                                           <input type="password" class="form-control login_inp" name="password" required  placeholder="Пароль">
+                                       </div>
+                                   </div>
+                                   <div class="row justify-content-center text-center">
+                                       <div class="col-10">
+                                           <div class="text-center mb-2">
+                                               <a href="{{ route('password.request') }}" class="foget_pass">Забыли пароль?</a>
+                                           </div>
+                                           <button type="submit" class="btn btn-default form-control login_but mb-2">
+                                               Войти
+                                           </button>
+                                       </div>
+                                   </div>
+                                   <div class="dropdown-divider"></div>
+                                   <div class="text-center">
+                                       <span  class="register_but show_form">Зарегистрироваться <i class="fas fa-arrow-right"></i></span>
+                                   </div>
+                               </form>
+                           </div>
+                           <div class="dropdown-menu drop_reg word_stl form_hide change_form" aria-labelledby="navbarDropdown">
+                               <div class="text-right">
+                                   <span class="times_stl">&times</span>
+                               </div>
+                               <form action="">
+                                   <div class="row justify-content-center text-center">
+                                       <div class="col-10">
+                                           <div class="row justify-content-end">
+                                               <div class="col">
+                                                   <span class="text-center word_stl3 lk_in">Регистрация</span>
+                                               </div>
+                                           </div>
+                                           <div class="row justify-content-center mt10">
+                                               <div class="col-md-8">
+                                                   <span class="fast_in">Быстрый вход</span>
+                                               </div>
+                                               <div class="col-md-2">
+                                                   <div class="bor_f">
+                                                       <a href="/" class="soc_ico"><i class="fab fa-facebook-f"></i></a>
+                                                   </div>
+                                               </div>
+                                               <div class="col-md-2">
+                                                   <div class="bor_vk">
+                                                       <a href="/" class="soc_ico"><i class="fab fa-vk"></i></a>
+                                                   </div>
+                                               </div>
+                                           </div>
+                                       </div>
+                                   </div>
+                               </form>
+                               <form method="POST" action="{{ route('register') }}">
+                                   @csrf
+                                   <div class="px-4 pt-3 pb-0">
+                                       <div class="form-group">
+                                           <div class="form-check d-inline">
+                                               <label class="form-check-label">
+                                                   <input type="radio" class="form-check-input" name="role" value="1" checked>
+                                                   Я избиратель
+                                               </label>
+                                           </div>
+                                           <div class="form-check d-inline ml-2">
+                                               <label class="form-check-label">
+                                                   <input type="radio" class="form-check-input" name="role" value="2">
+                                                   Я кандидат
+                                               </label>
+                                           </div>
+                                       </div>
+                                       <div class="form-group">
+                                           <input type="email" class="form-control login_inp" name="email"  required  placeholder="E-mail">
+                                       </div>
+                                       <div class="form-group">
+                                           <input type="password" class="form-control login_inp" name="password" required  placeholder="Пароль">
+                                       </div>
+                                   </div>
+                                   <div class="row justify-content-center text-center">
+                                       <div class="col-10">
+                                           <button type="submit" class="btn btn-default form-control login_but mb-2">
+                                               Зарегистрироваться
+                                           </button>
+                                       </div>
+                                   </div>
+                                   <div class="dropdown-divider"></div>
+                                   <div class="text-center">
+                                       <span  class="register_but show_form"> Войти <i class="fas fa-arrow-right"></i></span>
+                                   </div>
+                               </form>
+                           </div>
                                 @else
                                 @if(Auth::user()->role == 1)
                                    <div class="dropdown-menu drop_stl2 word_stl" aria-labelledby="navbarDropdown">
@@ -253,13 +320,12 @@
             </div>
         </footer>
     </div>
+<!-- Scripts -->
+<script src="{{ asset('js/app.js') }}"></script>
+<script src="{{ asset('js/main.js') }}"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
+<script>
 
-    <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}"></script>
-    <script src="{{ asset('js/main.js') }}"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
-    <script>
-
-    </script>
+</script>
 </body>
 </html>

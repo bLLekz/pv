@@ -86,6 +86,12 @@ body{
     margin-top: 7px;
     margin-left: -60px;
 }
+.drop_reg{
+	width: 280px;
+	height: 375px;
+	margin-top: 7px;
+	margin-left: -60px;
+}
 .drop_stl2{
 	width: 280px;
     /*height: 265px;*/
@@ -197,6 +203,7 @@ body{
 	font-family: Roboto-Medium;
 	color: #3c4154;
 	font-size: 15px;
+	cursor: pointer;
 }
 .logout_but{
 	font-family: Roboto-Medium;
@@ -964,4 +971,7 @@ header {
 }
 .link_cand{
     height: 50px;
+}
+.form_hide{
+	display: none;
 }

@@ -39,10 +39,30 @@
 
                 <!-- Right Side Of Navbar -->
                 <ul class="navbar-nav ml-auto word_stl">
-                    <li><div class="mr15"><a class="nav-link head_nav_stl nav_head" href="{{ url('/') }}"><i class="fa fa-search mr8 ico_size"></i> Поиск</a></div></li>
-                    <li><div class="mr15"><a class="nav-link head_nav_stl nav_head" href="{{ url('/') }}"><i class="fas fa-map-marker-alt mr8 ico_size"></i> Череповец <i class="fas fa-caret-down ml5"></i></a></div></li>
-                    <li><div class="mr15"><a class="nav-link head_nav_stl nav_head" href="{{ url('/') }}"><i class="fas fa-language mr8 ico_size"></i>
-                                Russian <i class="fas fa-caret-down ml5"></i></a></div></li>
+                    <li><div class="mr-3">
+                            <a class="nav-link head_nav_stl nav_head" href="{{ url('/') }}">
+                                <i class="fa fa-search mr8 ico_size"></i>
+                                Поиск
+                            </a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="mr-3">
+                            <a class="nav-link head_nav_stl nav_head" href="{{ url('/') }}">
+                                <i class="fas fa-map-marker-alt mr8 ico_size"></i>
+                                Череповец <i class="fas fa-caret-down ml5"></i>
+                            </a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="mr-3">
+                            <a class="nav-link head_nav_stl nav_head" href="{{ url('/') }}">
+                                <i class="fas fa-language mr8 ico_size"></i>
+
+                                Russian <i class="fas fa-caret-down ml5"></i>
+                            </a>
+                        </div>
+                    </li>
 
                     <!-- Authentication Links -->
                     <li class="nav-item dropdown">
@@ -50,7 +70,7 @@
                             <i class="fas fa-user-circle mr8 ico_size"></i> Личный кабинет <span class="caret"></span>
                         </a>
                         @guest
-                        <div class="dropdown-menu drop_stl word_stl" aria-labelledby="navbarDropdown">
+                        <div class="dropdown-menu drop_stl word_stl change_form" aria-labelledby="navbarDropdown">
                             <div class="text-right">
                                 <span class="times_stl">&times</span>
                             </div>
@@ -102,10 +122,77 @@
                                 </div>
                                 <div class="dropdown-divider"></div>
                                 <div class="text-center">
-                                    <a href="/register" class="register_but">Зарегистрироваться <i class="fas fa-arrow-right"></i></a>
+                                    <span  class="register_but show_form">Зарегистрироваться <i class="fas fa-arrow-right"></i></span>
                                 </div>
                             </form>
-                        </div>
+                            </div>
+                            <div class="dropdown-menu drop_reg word_stl form_hide change_form" aria-labelledby="navbarDropdown">
+                                <div class="text-right">
+                                    <span class="times_stl">&times</span>
+                                </div>
+                                <form action="">
+                                    <div class="row justify-content-center text-center">
+                                        <div class="col-10">
+                                            <div class="row justify-content-end">
+                                                <div class="col">
+                                                    <span class="text-center word_stl3 lk_in">Регистрация</span>
+                                                </div>
+                                            </div>
+                                            <div class="row justify-content-center mt10">
+                                                <div class="col-md-8">
+                                                    <span class="fast_in">Быстрый вход</span>
+                                                </div>
+                                                <div class="col-md-2">
+                                                    <div class="bor_f">
+                                                        <a href="/" class="soc_ico"><i class="fab fa-facebook-f"></i></a>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-2">
+                                                    <div class="bor_vk">
+                                                        <a href="/" class="soc_ico"><i class="fab fa-vk"></i></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                                <form method="POST" action="{{ route('register') }}">
+                                    @csrf
+                                    <div class="px-4 pt-3 pb-0">
+                                        <div class="form-group">
+                                                <div class="form-check d-inline">
+                                                    <label class="form-check-label">
+                                                        <input type="radio" class="form-check-input" name="role" value="1" checked>
+                                                        Я избиратель
+                                                    </label>
+                                                </div>
+                                                <div class="form-check d-inline ml-2">
+                                                    <label class="form-check-label">
+                                                        <input type="radio" class="form-check-input" name="role" value="2">
+                                                        Я кандидат
+                                                    </label>
+                                                </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="email" class="form-control login_inp" name="email"  required  placeholder="E-mail">
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="password" class="form-control login_inp" name="password" required  placeholder="Пароль">
+                                        </div>
+                                    </div>
+                                    <div class="row justify-content-center text-center">
+                                        <div class="col-10">
+                                            <button type="submit" class="btn btn-default form-control login_but mb-2">
+                                                Зарегистрироваться
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="dropdown-divider"></div>
+                                    <div class="text-center">
+                                        <span  class="register_but show_form"> Войти <i class="fas fa-arrow-right"></i></span>
+                                    </div>
+                                </form>
+                            </div>
                         @else
                             @if(Auth::user()->role == 1)
                                 <div class="dropdown-menu drop_stl2 word_stl" aria-labelledby="navbarDropdown">

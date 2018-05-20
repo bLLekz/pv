@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.second')
 
 @section('content')
 <div class="container">
@@ -10,18 +10,24 @@
                 <div class="card-body">
                     <form method="POST" action="{{ route('register') }}">
                         @csrf
-
                         <div class="form-group row">
-                            <label for="name" class="col-md-4 col-form-label text-md-right">Name</label>
+                            <label for="email" class="col-md-4 col-form-label text-md-right">Role</label>
 
                             <div class="col-md-6">
-                                <input id="name" type="text" class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" name="name" value="{{ old('name') }}" required autofocus>
-
-                                @if ($errors->has('name'))
-                                    <span class="invalid-feedback">
-                                        <strong>{{ $errors->first('name') }}</strong>
-                                    </span>
-                                @endif
+                                <fieldset class="form-group">
+                                    <div class="form-check">
+                                        <label class="form-check-label">
+                                            <input type="radio" class="form-check-input" name="role" value="1" checked>
+                                            Я избиратель
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <label class="form-check-label">
+                                            <input type="radio" class="form-check-input" name="role" value="2">
+                                            Я кандидат
+                                        </label>
+                                    </div>
+                                </fieldset>
                             </div>
                         </div>
 
@@ -33,7 +39,7 @@
 
                                 @if ($errors->has('email'))
                                     <span class="invalid-feedback">
-                                        <strong>{{ $errors->first('email') }}</strong>
+                                        <strong>Не верный Email</strong>
                                     </span>
                                 @endif
                             </div>
@@ -47,20 +53,11 @@
 
                                 @if ($errors->has('password'))
                                     <span class="invalid-feedback">
-                                        <strong>{{ $errors->first('password') }}</strong>
+                                        <strong>Пароль должен быть больше 6 символов</strong>
                                     </span>
                                 @endif
                             </div>
                         </div>
-
-                        <div class="form-group row">
-                            <label for="password-confirm" class="col-md-4 col-form-label text-md-right">Confirm Password</label>
-
-                            <div class="col-md-6">
-                                <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required>
-                            </div>
-                        </div>
-
                         <div class="form-group row mb-0">
                             <div class="col-md-6 offset-md-4">
                                 <button type="submit" class="btn btn-primary">
