@@ -204,7 +204,7 @@
                                                 <li class="list-group"><a href="/station" class="ul-login">Мой избирательный участок</a></li>
                                                 <li class="list-group"><a href="/message" class="ul-login">Уведомления <span class="badge badge-red">3</span></a></li>
                                                 <li class="list-group"><a href="/form" class="ul-login">Анкета</a></li>
-                                                <li class="list-group"><a href="/" class="ul-login">Обратиться в комиссию</a></li>
+                                                <li class="list-group"><a href="/" data-toggle="modal" data-target="#myModal"  class="ul-login">Обратиться в комиссию</a></li>
                                                 @else
                                                     <li class="list-group"><a href="/personal" class="ul-login">Личные данные</a></li>
                                                     <li class="list-group"><a href="/station" class="ul-login">Сведения о карточке</a></li>
@@ -284,7 +284,7 @@
                                 <ul class="navbar-nav mr-auto">
                                     <li><a href="/help" class="content_foot">Помощь в телеграмм</a></li>
                                     <li><a href="/questions" class="content_foot">Частые вопросы</a></li>
-                                    <li><a href="/apply" class="content_foot">Обратиться в комиссию</a></li>
+                                    <li><a href="/" data-toggle="modal" data-target="#myModal" class="content_foot">Обратиться в комиссию</a></li>
                                     <li><a href="/guard" class="content_foot">О защите персональных данных</a></li>
                                 </ul>
                             </nav>
@@ -319,6 +319,33 @@
                 </div>
             </div>
         </footer>
+    </div>
+    <!-- Modal -->
+    <div class="modal fade" id="myModal">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header nobor_lk">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <h4 class="text-center req_cik_mod">
+                        Написать обращение в Центральную
+                        <br>
+                        избирательную комиссию
+                    </h4>
+                    <input type="text" class="form-control inp_cik" placeholder="Ваше ФИО">
+                    <input type="text" class="form-control inp_cik" placeholder="Ваш e-mail">
+                    <textarea name="cik_area" class="form-control area_cik" id="cik_area_modal" cols="10" rows="10" placeholder="Текс обращения">
+
+                    </textarea>
+                </div>
+                <div class="modal-footer nobor_lk_foot">
+                    <button type="button" class="btn btn-danger bnt_cik">Отправить</button>
+                </div>
+            </div>
+        </div>
     </div>
 <!-- Scripts -->
 <script src="{{ asset('js/app.js') }}"></script>

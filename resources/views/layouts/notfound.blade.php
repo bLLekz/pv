@@ -200,7 +200,7 @@
                             <ul class="navbar-nav mr-auto">
                                 <li><a href="/help" class="content_foot">Помощь в телеграмм</a></li>
                                 <li><a href="/questions" class="content_foot">Частые вопросы</a></li>
-                                <li><a href="/apply" class="content_foot">Обратиться в комиссию</a></li>
+                                <li><a href="/" data-toggle="modal" data-target="#myModal" class="content_foot">Обратиться в комиссию</a></li>
                                 <li><a href="/guard" class="content_foot">О защите персональных данных</a></li>
                             </ul>
                         </nav>

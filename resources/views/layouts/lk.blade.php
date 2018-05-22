@@ -190,7 +190,12 @@
                                                     @if (Auth::user()->name != '')
                                                         <span class="">Добро пожаловать,
                                                         <br>
-                                                            {{Auth::user()->name}}!
+
+                                                            @if (Auth::user()->name != "")
+                                                                @foreach(explode(' ', Auth::user()->name) as $name)
+                                                                    <option>{{$name}}</option>
+                                                                @endforeach
+                                                            @endif
                                                         </span>
                                                     @else
                                                         <span class="">Добро пожаловать!</span>
@@ -204,7 +209,7 @@
                                                             <li class="list-group"><a href="/station" class="ul-login">Мой избирательный участок</a></li>
                                                             <li class="list-group"><a href="/message" class="ul-login">Уведомления <span class="badge badge-red">3</span></a></li>
                                                             <li class="list-group"><a href="/form" class="ul-login">Анкета</a></li>
-                                                            <li class="list-group"><a href="/" class="ul-login">Обратиться в комиссию</a></li>
+                                                            <li class="list-group"><a href="/" data-toggle="modal" data-target="#myModal"  class="ul-login">Обратиться в комиссию</a></li>
                                                         @else
                                                             <li class="list-group"><a href="/personal" class="ul-login">Личные данные</a></li>
                                                             <li class="list-group"><a href="/station" class="ul-login">Сведения о карточке</a></li>
@@ -359,7 +364,7 @@
                             <ul class="navbar-nav mr-auto">
                                 <li><a href="/help" class="content_foot">Помощь в телеграмм</a></li>
                                 <li><a href="/questions" class="content_foot">Частые вопросы</a></li>
-                                <li><a href="/apply" class="content_foot">Обратиться в комиссию</a></li>
+                                <li><a href="/" data-toggle="modal" data-target="#myModal" class="content_foot">Обратиться в комиссию</a></li>
                                 <li><a href="/guard" class="content_foot">О защите персональных данных</a></li>
                             </ul>
                         </nav>

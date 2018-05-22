@@ -129,8 +129,8 @@ $(document).ready(function(){
     var all = $('#more_part').attr('date-param');
     $('#more_part').click(function () {
         global = parseInt(global) + 10;
-        console.log(all);
-        console.log(global);
+        // console.log(all);
+        // console.log(global);
         if( parseInt(all) <= parseInt(global))
         {
             $('#more_part').hide();
@@ -156,4 +156,8 @@ $(document).ready(function(){
     });
 });
 //
-
+$(document).ready(function(){
+    $( "#show_pass_div" ).click(function() {
+        $( ".hide_pass_div" ).toggle(180);
+    });
+});
