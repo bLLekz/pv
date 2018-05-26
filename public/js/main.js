@@ -110,6 +110,12 @@ $(document).ready(function(){
 //
 $('#search_part').on('keyup',function() {
     var value = $(this).val();
+    if (value != ''){
+        $('#more_part').addClass('d-none');
+    }
+    else{
+        $('#more_part').removeClass('d-none');
+    }
     $.ajax({
         type : 'post',
         url :'consignment/search',
@@ -159,5 +165,26 @@ $(document).ready(function(){
 $(document).ready(function(){
     $( "#show_pass_div" ).click(function() {
         $( ".hide_pass_div" ).toggle(180);
+    });
+});
+//
+$('#save_date_lk').click(function() {
+    var name = $('#fio_inp').val();
+    var email = $('#email_inp').val();
+    $.ajax({
+        type : 'post',
+        url :'/personal/update',
+        dataType: 'JSON',
+        data :
+            {
+                'name':name,
+                'email':email
+             },
+        headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        },
+        success: function (data) {
+            $('#data_div').html(data);
+        }
     });
 });

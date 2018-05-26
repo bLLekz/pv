@@ -25,6 +25,7 @@ Route::post('/consignment/more', 'ConsignmentController@more');
 Route::get('/where', 'WhereController@where')->name('where');
 Route::get('/questions', 'QuestionsController@questions')->name('questions');
 Route::get('/personal', 'PersonalController@personal')->name('personal');
+Route::post('/personal/update', 'PersonalController@update');
 Route::get('/station', 'StationController@station')->name('station');
 Route::get('/message', 'MessageController@message')->name('message');
 Route::get('/contacts', 'ContactsController@contacts')->name('contacts');

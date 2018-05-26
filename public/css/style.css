@@ -984,3 +984,8 @@ header {
 .hide_pass_div{
 	display: none;
 }
+#error{
+	font-family: Roboto-Regular;
+	color: #3e4150;
+	font-size: 14px;
+}

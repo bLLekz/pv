@@ -4,7 +4,8 @@
     @if(Auth::user()->role == 1)
     <div class="lk_menu_list ">
         <div class="text-left text_lk ">
-            <form action="{{ route('personal') }}">
+            <form action="{{ URL::to('personal/update') }}" method="POST">
+                {{ csrf_field() }}
                 <p class="lk">Личные данные</p>
                 @if(Auth::user()->photo != null )
                     <img src="/url" class="pull-left igm_lk">
@@ -18,6 +19,7 @@
                 <br>
                 <label for="email_inp">E-mail</label>
                 <input type="email" class="form-control inpt_lk" id="email_inp" placeholder="Введите E-mail" value="{{Auth::user()->email}}">
+                <div id="data_div"></div>
                 <br>
                 <p class="change_pass"  id="show_pass_div">Изменить пароль</p>
                 <div class="hide_pass_div mt-5 mb-5" id="pass_div">
@@ -25,7 +27,7 @@
                     <input type="password" class="form-control inpt_lk" id="password_re" placeholder="Повотрите Пароль">
                 </div>
                 <br>
-                <button type="button" class="btn btn-danger bnt_save_lk">Сохранить</button>
+                <button type="button" class="btn btn-danger bnt_save_lk" id="save_date_lk">Сохранить</button>
             </form>
         </div>
         <hr>

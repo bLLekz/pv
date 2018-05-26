@@ -47,6 +47,8 @@
                 @endforeach
             </div>
             <div class="row">
+                <div class="ml-auto mr-auto"><p id="error"></p></div>
+            </div><div class="row">
                 <span class="btn btn-light  but_more_part ml-auto mr-auto" id="more_part" date-param="{{$all}}">Еще партии</span>
             </div>
         </div>
