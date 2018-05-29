@@ -1,3 +1,9 @@
+$.ajaxSetup({
+    headers: {
+        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+    }
+});
+//
 $(document).ready(function () {
     $(document).on("scroll", onScroll);
     
@@ -162,7 +168,7 @@ $(document).ready(function(){
     });
 });
 //
-$(document).ready(function(){
+$(document).ready(function Hide_pass_div(){
     $( "#show_pass_div" ).click(function() {
         $( ".hide_pass_div" ).toggle(180);
     });
@@ -174,17 +180,62 @@ $('#save_date_lk').click(function() {
     $.ajax({
         type : 'post',
         url :'/personal/update',
-        dataType: 'JSON',
         data :
             {
                 'name':name,
                 'email':email
              },
-        headers: {
-            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-        },
         success: function (data) {
+            // console.log(data);
             $('#data_div').html(data);
+            $( ".alert_msg" ).fadeOut(2500);
         }
     });
 });
+//
+$('#bnt_change_pass').click(function() {
+    var po = $('#password_old').val(); // старый пароль
+    var pn = $('#password_new').val(); // новый пароль
+    var pre = $('#password_re').val(); // повтор пароля
+    $.ajax({
+        type : 'post',
+        url :'/personal/password',
+        data :
+            {
+                'po':po,
+                'pn':pn,
+                'pre':pre
+             },
+        success: function (data) {
+            // console.log(data);
+            $('#data_pass_div').html(data);
+            $( ".alert_msg" ).fadeOut(2500);
+        }
+    });
+});
+//
+$('#save_date2_lk').click(function() {
+    var series = $('#pasp_s_inp').val(); // Серия
+    var number = $('#pasp_n_inp').val(); // Номер
+    var day = $('#day_select').val(); // День
+    var month = $('#month_select').val(); // Месяц
+    var year = $('#year_select').val(); // Год
+    $.ajax({
+        type : 'post',
+        url :'/personal/update2',
+        data :
+            {
+                'series':series,
+                'number':number,
+                'day':day,
+                'month':month,
+                'year':year
+             },
+        success: function (data) {
+            console.log(data);
+            $('#data_div2').html(data);
+            $( ".alert_msg" ).fadeOut(2500);
+        }
+    });
+});
+//

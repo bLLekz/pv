@@ -989,3 +989,13 @@ header {
 	color: #3e4150;
 	font-size: 14px;
 }
+.message_done{
+	font-family: Roboto-Bold;
+	color: #28a745;
+	font-size: 16px;
+}
+.message_wrong{
+	font-family: Roboto-Bold;
+	color: #a7282e;
+	font-size: 16px;
+}

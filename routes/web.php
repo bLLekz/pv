@@ -26,11 +26,13 @@ Route::get('/where', 'WhereController@where')->name('where');
 Route::get('/questions', 'QuestionsController@questions')->name('questions');
 Route::get('/personal', 'PersonalController@personal')->name('personal');
 Route::post('/personal/update', 'PersonalController@update');
+Route::post('/personal/password', 'PersonalController@password');
+Route::post('/personal/update2', 'PersonalController@update2');
 Route::get('/station', 'StationController@station')->name('station');
 Route::get('/message', 'MessageController@message')->name('message');
+Route::get('/message/{id}', 'MessageController@show');
 Route::get('/contacts', 'ContactsController@contacts')->name('contacts');
 Route::get('/form', 'FromController@form')->name('form');
 Route::get('/consignment/{id}', 'GangController@Gang')->name('Gang');
-//Route::get('/message/{id}', 'MessageController@message')->name('message');
 //test page
 Route::get('/test', 'TestController@test')->name('test');
