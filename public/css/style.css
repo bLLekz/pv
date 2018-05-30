@@ -152,7 +152,7 @@ body{
 .r{
 	background: #e8a8a8;
 	border: 1px solid #000;
-	height: 425px;
+	height: 75px;
 }
 .c{
 	background: #1f77b2;/*height: 500px;*/ text-align: center;
@@ -161,7 +161,7 @@ body{
 	background: #1f77b2;height: 100px; text-align: center;
 }
 .t{
-	height: 75px; text-align: center; background: #ddd; color: #000; border: 1px solid #000;
+	height: auto; text-align: center; background: #ddd; color: #000; border: 1px solid #000;
 }
 .t:nth-child(even){
 	background: #eee;
@@ -998,4 +998,42 @@ header {
 	font-family: Roboto-Bold;
 	color: #a7282e;
 	font-size: 16px;
+}
+.msg_photo{
+	width: 75px;
+	height: 75px;
+}
+.msg_img{
+	width: 75px;
+	float: left;
+}
+.msg_img_right{
+	width: 75px;
+	float: right;
+}
+.msg_body{
+	font-family: Roboto-Regular;
+	color: #3e4150;
+	font-size: 16px;
+	max-width: 466px;
+}
+.msg_name{
+	font-family: Roboto-Bold;
+	color: #3e4150;
+	font-size: 16px;
+}
+.msg_date{
+	font-family: Roboto-Regular;
+	color: #848484;
+	font-size: 14px;
+}
+.body_text{
+	font-family: Roboto-Regular;
+	color: #3e4150;
+	background: #f4f7fc;
+}
+.body_text_right{
+	font-family: Roboto-Regular;
+	color: #3e4150;
+	background: #e3f5ff;
 }

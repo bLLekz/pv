@@ -190,7 +190,7 @@
                                            @if (Auth::user()->name != '')
                                             <span class="">Добро пожаловать,
                                                 <br>
-                                                {{Auth::user()->name}}!
+                                                {{$name_user}}!
                                             </span>
                                            @else
                                            <span class="">Добро пожаловать!</span>

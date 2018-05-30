@@ -190,12 +190,7 @@
                                                     @if (Auth::user()->name != '')
                                                         <span class="">Добро пожаловать,
                                                         <br>
-
-                                                            @if (Auth::user()->name != "")
-                                                                @foreach(explode(' ', Auth::user()->name) as $name)
-                                                                    <option>{{$name}}</option>
-                                                                @endforeach
-                                                            @endif
+                                                            {{$name_user}}!
                                                         </span>
                                                     @else
                                                         <span class="">Добро пожаловать!</span>
