@@ -1032,8 +1032,49 @@ header {
 	color: #3e4150;
 	background: #f4f7fc;
 }
+.body_text2{
+	font-family: Roboto-Regular;
+	color: #3e4150;
+	background: #e3f5ff;
+}
 .body_text_right{
 	font-family: Roboto-Regular;
 	color: #3e4150;
 	background: #e3f5ff;
+}
+.btn_msg{
+	font-family: Roboto-Bold;
+	font-size: 16px;
+	background: #fff;
+	color: #3e4150;
+	border: 1px solid #ecedef;
+	height: 50px;
+}
+.inp_msg{
+	font-family: Roboto-Regular;
+	font-size: 16px;
+}
+.prokrutka {
+	height:500px;
+	overflow-y: scroll;
+	overflow-x: hidden;
+}
+/* width */
+.prokrutka::-webkit-scrollbar {
+	width: 10px;
+}
+
+/* Track */
+.prokrutka::-webkit-scrollbar-track {
+	background: #e4e4e4;
+}
+
+/* Handle */
+.prokrutka::-webkit-scrollbar-thumb {
+	background: #888;
+}
+
+/* Handle on hover */
+.prokrutka::-webkit-scrollbar-thumb:hover {
+	background: #555;
 }

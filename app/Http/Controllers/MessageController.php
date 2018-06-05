@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
+use Carbon\Carbon;
 
 class MessageController extends Controller
 {
@@ -34,5 +35,24 @@ class MessageController extends Controller
             ->get();
 
         return view('msg_show',['msg' => $msg],['name' => $name]);
+    }
+    public function send(Request $request, $id)
+    {
+        if ($request-> ajax()){
+            $body = $request->body;
+            if ($body){
+                $current_date = Carbon::now('Europe/Moscow');
+                $date = array('from_id'=>Auth::id(),'to_id'=>$id,'body'=>$body,'status'=>0,'date'=>$current_date);
+                DB::table('msg')->insert($date);
+//                return $this->show($id);
+                return response($id);
+            }
+            else{
+
+                return back();
+            }
+
+        }
+
     }
 }

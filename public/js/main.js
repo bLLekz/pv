@@ -239,3 +239,53 @@ $('#save_date2_lk').click(function() {
     });
 });
 //
+$(document).ready(function scrolldown(){
+    var div = $("#scroll_div");
+    div.scrollTop(div.prop('scrollHeight'));
+});
+//
+$('#send_msg').click(function() {
+    var body = $('#inp_msg').val(); // Текст сообщения
+    var url = window.location.href;
+    var div = $("#scroll_div");
+    $.ajax({
+        type : 'post',
+        url :url,
+        data :
+            {
+                'body':body
+            },
+        success: function (data) {
+            if (data){
+                $('#inp_msg').val('');
+                $('#scroll_div').load('/message/'+data+' #msg_cont');
+                var objDiv = $("#scroll_div");
+                var h = objDiv.get(0).scrollHeight;
+                objDiv.animate({scrollTop: h});
+            }
+        }
+    });
+})
+//
+$('#inp_msg').keypress(function(e) {
+        if(e.which == 13)//Enter key pressed
+        {
+            var body = $('#inp_msg').val(); // Текст сообщения
+            var url = window.location.href;
+            $.ajax({
+                type : 'post',
+                url :url,
+                data :
+                    {
+                        'body':body
+                    },
+                success: function (data) {
+                    $('#inp_msg').val('');
+                    $('#scroll_div').load('/message/'+data+' #msg_cont');
+                    var objDiv = $("#scroll_div");
+                    var h = objDiv.get(0).scrollHeight;
+                    objDiv.animate({scrollTop: h});
+                }
+            });
+        }
+});
