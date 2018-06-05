@@ -41,7 +41,7 @@
                                         <p class="gang_text">ОГРН и дата внесения в ЕГРЮЛ:</p>
                                     </div>
                                     <div class="col-md-7  text-left">
-                                        <p class="gang_text">{{ $gang->ogrh }} от {{ $gang->date_in }}</p>
+                                        <p class="gang_text">{{ $gang->ogrh }} от {{ date('d.m.Y', strtotime($gang->date_in)) }}</p>
                                     </div>
                                 </div>
                                 <div class="row">
@@ -95,7 +95,7 @@
                                     <a href="/" class="menu_gang"> Сравнить предпочтения</a>
                                     <i class="fas fa-angle-right float-right mt-2"></i>
                                 </div>
-                                <button data-toggle="modal" data-target="#myModal" class="btn req_cik ul-login">Оценить партию</button>
+                                <button data-toggle="modal" data-target="#myModal2" class="btn req_cik ul-login">Оценить партию</button>
                             </div>
                         </div>
                     </div>
@@ -106,6 +106,40 @@
                             </div>
                         </div>
                     </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal -->
+    <div class="modal fade" id="myModal2">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header nobor_lk">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="text-center req_cik_mod">
+                        <h4 class="">
+                            Оценить политическую партию
+                        </h4>
+                    </div>
+                    <div class="text-center gang_igm_mod">
+                        <img src="/img/none.jpg" class="igm_gang_mod">
+                    </div>
+                    <div class="text-center gang_name_mod">
+                       <p>{{$gang->name}}</p>
+                    </div>
+                    <div class="row pl-4 pr-4 pb-3 text-center">
+                        <div class="btn btn-white col-md ml-2 mr-2 vote" id="voted_for"><p class="pt-1 d-inline">За</p></div>
+                        <div class="btn btn-white col-md ml-2 mr-2 vote btn_for selected" id="voted_for"><i class="far fa-check-circle d-inline"></i> <p class="pt-1 d-inline">За</p></div>
+                        <div class="btn btn-white col-md ml-2 mr-2 vote2" id="voted_against"><p class="pt-1">Против</p></div>
+                        <div class="btn btn-white col-md ml-2 mr-2 vote2 btn_against selected" id="voted_against"><i class="far fa-check-circle d-inline"></i> <p class="pt-1 d-inline">Против</p></div>
+                    </div>
+                </div>
+                <div class="modal-footer nobor_lk_foot">
+                    <button type="button" class="btn btn-danger bnt_cik" id="send_vote">Голосовать</button>
                 </div>
             </div>
         </div>

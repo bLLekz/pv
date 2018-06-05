@@ -366,33 +366,6 @@
         </div>
     </footer>
 </div>
-<!-- Modal -->
-<div class="modal fade" id="myModal">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header nobor_lk">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">×</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                <h4 class="text-center req_cik_mod">
-                    Написать обращение в Центральную
-                    <br>
-                    избирательную комиссию
-                </h4>
-                <input type="text" class="form-control inp_cik" placeholder="Ваше ФИО">
-                <input type="text" class="form-control inp_cik" placeholder="Ваш e-mail">
-                <textarea name="cik_area" class="form-control area_cik" id="cik_area_modal" cols="10" rows="10" placeholder="Текс обращения">
-
-                    </textarea>
-            </div>
-            <div class="modal-footer nobor_lk_foot">
-                <button type="button" class="btn btn-danger bnt_cik">Отправить</button>
-            </div>
-        </div>
-    </div>
-</div>
 <!-- Scripts -->
 <script src="{{ asset('js/app.js') }}"></script>
 <script src="{{ asset('js/main.js') }}"></script>

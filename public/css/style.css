@@ -606,6 +606,13 @@ header {
 	top: 50%;
 	margin: 0 auto;
 }
+#myModal2 .modal-dialog {
+	-webkit-transform: translate(0,-50%);
+	-o-transform: translate(0,-50%);
+	transform: translate(0,-50%);
+	top: 50%;
+	margin: 0 auto;
+}
 .nobor_lk{
 	border-bottom: none;
 	border-top: none;
@@ -1077,4 +1084,37 @@ header {
 /* Handle on hover */
 .prokrutka::-webkit-scrollbar-thumb:hover {
 	background: #555;
+}
+.gang_name_mod{
+	font-family: Roboto-Regular;
+	font-size: 23px;
+	color: #3e4150;
+}
+.igm_gang_mod{
+	width: 130px;
+	height: 130px;
+	border: 1px solid #dedede91;
+	border-radius: 50%;
+}
+.btn-white{
+	font-family: Roboto-Bold;
+	font-size: 20px;
+	background: #fff;
+	color: #3e4150;
+	border: 1px solid #ecedef;
+	height: 50px;
+}
+.btn_for{
+	display: none;
+	font-family: Roboto-Medium;
+	font-size: 20px;
+	background: #3abf73;/*#71bc91*/
+	color: #fff;
+}
+.btn_against{
+	display: none;
+	font-family: Roboto-Medium;
+	font-size: 20px;
+	background: #ff4547;/*#ee9293*/
+	color: #fff;
 }

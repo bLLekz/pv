@@ -52,25 +52,6 @@ $(document).ready(function() {
 
 });
 //
-
-// $(function() {
-//     $('.btn_edit_save').click(function() {
-//
-//         $.ajax({
-//             type: "POST",
-//             url: 'confirm.php',
-//             data:{
-//                 col :arr,
-//                 table: $(".table").attr("id")
-//             },
-//             success: function(data) {
-//                 $('#result').html(data);
-//             }
-//         });
-//     });
-// });
-
-//
 $(document).ready(function(){
     $('#sel_search').change(function(){
         if($(this).val() == 1) {
@@ -289,3 +270,31 @@ $('#inp_msg').keypress(function(e) {
             });
         }
 });
+//
+// $('#voted_for, #voted_against').click(function() {
+//     if ($(this).hasClass("selected") ){
+//         $(this).removeClass('btn_for selected');
+//     }
+//     else if ($('#voted_for').hasClass("selected") ){
+//         $(this).removeClass('btn_for selected');
+//     }
+//     else if ($('#voted_against').hasClass("selected") ){
+//         $(this).removeClass('btn_for selected');
+//     }
+//     else {
+//         $(this).addClass('btn_for selected');
+//     }
+// });
+$(document).ready(function(){
+    if ($('.vote').hasClass("selected") && $(".vote2:not(.selected)")){
+        $( ".vote" ).click(function() {
+            $( ".vote" ).toggle();
+        });
+    }
+    if ($('.vote2').hasClass("selected") && $(".vote:not(.selected)")){
+        $( ".vote2" ).click(function() {
+            $( ".vote2" ).toggle();
+        });
+    }
+});
+//
