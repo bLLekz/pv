@@ -26,13 +26,27 @@ class HomeController extends Controller
      */
     public function index()
     {
-//        $users = DB::table('users')
-//            ->select('role')
-//            ->where('id', Auth::id())
-//            ->get();
-
-//        $users = DB::select('select * from users ');
 
         return view('home');
+    }
+
+    public function info()
+    {
+        return view('info');
+    }
+
+    public function where()
+    {
+        return view('where');
+    }
+
+    public function questions()
+    {
+        return view('questions');
+    }
+
+    public function contacts()
+    {
+        return view('contacts');
     }
 }

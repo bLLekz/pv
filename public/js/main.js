@@ -271,20 +271,6 @@ $('#inp_msg').keypress(function(e) {
         }
 });
 //
-// $('#voted_for, #voted_against').click(function() {
-//     if ($(this).hasClass("selected") ){
-//         $(this).removeClass('btn_for selected');
-//     }
-//     else if ($('#voted_for').hasClass("selected") ){
-//         $(this).removeClass('btn_for selected');
-//     }
-//     else if ($('#voted_against').hasClass("selected") ){
-//         $(this).removeClass('btn_for selected');
-//     }
-//     else {
-//         $(this).addClass('btn_for selected');
-//     }
-// });
 $(document).ready(function(){
     if ($('.vote').hasClass("selected") && $(".vote2:not(.selected)")){
         $( ".vote" ).click(function() {
@@ -298,3 +284,9 @@ $(document).ready(function(){
     }
 });
 //
+$('#myTab p').on('click', function (e) {
+    e.preventDefault()
+    $(this).tab('show')
+})
+//
+
