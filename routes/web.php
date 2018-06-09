@@ -18,10 +18,12 @@ Route::get('/', function () {
 Auth::routes();
 //pages
 Route::get('/home', 'HomeController@index')->name('home');
-Route::get('/info', 'HomeController@info')->name('info');
 Route::get('/where', 'HomeController@where')->name('where');
 Route::get('/questions', 'HomeController@questions')->name('questions');
 Route::get('/contacts', 'HomeController@contacts')->name('contacts');
+//info
+Route::get('/info', 'HomeController@info')->name('info');
+Route::get('/info/{id}', 'HomeController@info_show');
 //parti
 Route::get('/consignment', 'ConsignmentController@consignment')->name('consignment');
 Route::post('/consignment/search', 'ConsignmentController@search');/*живой поиск по партиям*/

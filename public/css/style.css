@@ -883,11 +883,17 @@ header {
 	border: 1px solid #e0e3e6;
 	cursor: pointer;
 }
-.part_more{
-	font-family: Roboto-Bold;
+.part_morea{
+	font-family: Roboto-Regular;
 	color: #3b4255;
-	font-size: 16px;
+	font-size: 15px;
 	cursor: pointer;
+}
+.part_more{
+    font-family: Roboto-Bold;
+    color: #3b4255;
+    font-size: 16px;
+    cursor: pointer;
 }
 .bor_none{
 	border: none;
@@ -907,7 +913,11 @@ header {
     color: #fff;
 }
 .part_more:hover{
-    font-family: Roboto-Bold;
+    text-decoration: underline;
+    color: #3e4150;
+}
+.part_morea:hover{
+    text-decoration: none;
     color: #3e4150;
 }
 .igm_gang{
@@ -1117,4 +1127,80 @@ header {
 	font-size: 20px;
 	background: #ff4547;/*#ee9293*/
 	color: #fff;
+}
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+    border-color: transparent;
+    background: transparent;
+}
+.border_tab{
+    font-family: Roboto-Regular;
+    font-size: 16px;
+    color: #3e4150;
+}
+.border_tab.active{
+    border-bottom: 5px solid #0077af !important;
+}
+.nav-tabs .nav-link:focus, .nav-tabs .nav-link:hover {
+    border-color: transparent;
+    cursor: pointer;
+}
+.nav-tabs .nav-link {
+    border: none;
+    border-top-left-radius: .25rem;
+    border-top-right-radius: .25rem;
+}
+
+.dropdown-menu:after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    border: 6px solid;
+}
+.dropdown-menu:after {
+    border-bottom-color: #fff;
+    color: transparent;
+    left: 50%;
+    bottom: 100%;
+    margin-left: -8px;
+}
+.nav-tabs {
+     border-bottom: none;
+}
+.hr_info{
+    position: relative;
+    top: -31px;
+}
+.elect_info_text{
+    position: relative;
+    top: 50px;
+    width: 400px;
+    font-family: Roboto-Bold;
+    font-size: 32px;
+    color: #3e4150;
+}
+.href_info{
+    color: #3e4150;
+}
+.href_info:hover{
+    color: #3e4150;
+    text-decoration: none;
+}
+.text_elect{
+    font-family: Roboto-Bold;
+    font-size: 16px;
+    color: #3e4150;
+}
+.box_shadow_info:hover .text_elect{
+    color: #106396;
+    text-decoration: none;
+}
+.card_info{
+    height: 175px;
+}
+.info_text_height{
+    height: 115px;
+}
+.box_shadow_info:hover{
+    box-shadow: 0 0 4px rgba(0,0,0,0.5);
 }

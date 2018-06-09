@@ -30,18 +30,20 @@
                 @foreach($consignment as $part)
                 <div class="col-md-6 mt-3 mb-3">
                     <div class="card bor_none">
-                        <div class="card-body">
-                            <div class="row mt-1 mb-1">
-                                <div class="col-3">
-                                    <img src="/img/none.jpg" class="igm_part mb-3">
-                                    <a class="part_more" href="/consignment/{{$part->id}}">Подробнее <i class="fas fa-caret-right"></i></a>
-                                </div>
-                                <div class="col-9">
-                                    <h5 class="card-title sty_title">{{$part->name}}</h5>
-                                    <p class="card-text">{{$part->description}}</p>
+                        <a class="part_morea" href="/consignment/{{$part->id}}">
+                            <div class="card-body">
+                                <div class="row mt-1">
+                                    <div class="col-3">
+                                        <img src="/img/none.jpg" class="igm_part mb-3">
+                                        <p class="part_more" >Подробнее <i class="fas fa-caret-right"></i></p>
+                                    </div>
+                                    <div class="col-9">
+                                        <h5 class="card-title sty_title">{{$part->name}}</h5>
+                                        <p class="card-text">{{$part->description}}</p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
+                        </a>
                     </div>
                 </div>
                 @endforeach
