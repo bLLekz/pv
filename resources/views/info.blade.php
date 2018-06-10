@@ -33,7 +33,7 @@
                                             <p class="text_elect">{{$upc->name}}</p>
                                         </div>
                                         <div class="d-flex align-items-end">
-                                            <p class="d-inline mr-3  align-bottom">{{ date('d M Y', strtotime($upc->date)) }} </p> <p class="d-inline"> 3 кандидата</p>
+                                            <p class="d-inline mr-3  align-bottom">{{ date('d M Y', strtotime($upc->date)) }} </p> {{--<p class="d-inline"> {{$count_cand}} кандидата</p>--}}
                                         </div>
                                     </div>
                                 </a>

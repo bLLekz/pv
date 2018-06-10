@@ -41,18 +41,23 @@ class HomeController extends Controller
         $current_date = Carbon::now('Europe/Moscow');
 
         $upcoming = DB::table('election')
-            ->whereRaw(' date >= ?', [$current_date])
+            ->whereRaw(' date >= ? ORDER BY date ASC', [$current_date])
             ->take(4)
             ->get();
 
         $previous = DB::table('election')
-            ->whereRaw(' date < ?', [$current_date])
+            ->whereRaw(' date < ? ORDER BY date ASC', [$current_date])
             ->take(4)
             ->get();
 
+        $count_cand = DB::table('user_fields')
+            ->join('election', 'user_fields.election_id', '=', 'election.id')
+//            ->whereRaw('user_fields.election_id = election.id')
+            ->count();
 
 
-        return view('info')->with('upcoming',$upcoming)->with('previous',$previous);
+
+        return view('info')->with('upcoming',$upcoming)->with('previous',$previous)->with('count_cand',$count_cand);
     }
 
     public function info_show($id)
@@ -61,7 +66,22 @@ class HomeController extends Controller
             ->where('id', $id )
             ->first();
 
-        return view('info_show')->with('election',$election);
+        $user_fields = DB::table('user_fields')
+            ->where('election_id', $id )
+            ->get();
+
+        $users = DB::table('users')
+            ->join('user_fields', 'users.id', '=', 'user_fields.user_id')
+            ->where('user_fields.election_id', $id)
+            ->get();
+
+        $cons = DB::table('consignment')
+            ->join('user_fields', 'consignment.id', '=', 'user_fields.consignment_id')
+            ->where('user_fields.election_id', $id)
+            ->get();
+
+
+        return view('info_show')->with('election',$election)->with('user_fields',$user_fields)->with('users',$users)->with('cons',$cons);
     }
 
 
