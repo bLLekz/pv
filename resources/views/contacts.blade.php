@@ -1,7 +1,7 @@
 @extends('layouts.second')
 
 @section('content')
-    <div class="container-fluid content_stl 222222">
+    <div class="container-fluid content_stl">
         <div class="container">
             <div class="row mb-3">
                 <nav aria-label="breadcrumb">
